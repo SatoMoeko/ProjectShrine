@@ -44,7 +44,9 @@ public class CameraController : MonoBehaviour
             Pos_Camera -= transform.right * MoveSpeed * Time.deltaTime;
         }
 
+
         transform.position = Pos_Camera;
+
 
 
         Rot_Camera.x -= Input.GetAxis("Mouse Y") * RotateSpeed;
