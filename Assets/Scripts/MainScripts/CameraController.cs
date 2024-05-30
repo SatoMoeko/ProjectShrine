@@ -11,6 +11,7 @@ public class CameraController : MonoBehaviour
     Vector3 Pos_Camera = Vector2.zero;
     Vector3 Rot_Camera = Vector2.zero;
 
+
     // Start is called before the first frame update
     void Start()
     {

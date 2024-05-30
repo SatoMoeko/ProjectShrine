@@ -1426,7 +1426,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -1450,8 +1450,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.81
+  m_Height: 9.47
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1008223020
@@ -1461,7 +1461,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1008223017}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1512,7 +1512,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1008223017}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 69.5, y: 6.8, z: 163.74}
   m_LocalScale: {x: 0.51, y: 0.1734, z: 0.51}
   m_ConstrainProportionsScale: 0
@@ -3890,5 +3890,5 @@ SceneRoots:
   - {fileID: 1539745765}
   - {fileID: 857087414}
   - {fileID: 1683671336}
-  - {fileID: 1008223022}
   - {fileID: 325178844}
+  - {fileID: 1008223022}
