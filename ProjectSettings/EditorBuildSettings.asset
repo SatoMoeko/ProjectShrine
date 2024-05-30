@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/TiltleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/Main.unity
-    guid: 37a508bdd63db8c47974cc7e20d57954
+    path: Assets/Scenes/Main00.unity
+    guid: 806dfe8d366e10a4a84d7ebbb0d35292
   m_configObjects: {}
