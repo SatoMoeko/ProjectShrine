@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.MPE;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,48 +14,33 @@ public class Ending_Endroll : MonoBehaviour
 
     //スクロールスピード
     public float textScrollSpeed = 30f;
-    //テキスト制限位置
-    public float limitPosition;
-
-    //エンドロールが終了したかどうか
-    bool isStopEndRoll;
     //シーン遷移コルーチン
     Coroutine endRollCoroutne;
 
+    bool isStopEndRoll;
+
     void Start()
     {
-        // limitPosition = ;
-        endRollTxt.text = "endroll\nendroll\nendroll\nendroll\nsample\nsample\nsample\nsample\n\n\ntxt";
 
     }
 
     void Update()
     {
-        transform.position = new Vector2(transform.position.x,
+        if (isStopEndRoll)
+        {
+            endRollCoroutne = StartCoroutine(GoToStartScene());
+        }
+        else
+        {
+            transform.position = new Vector2(transform.position.x,
                     transform.position.y + textScrollSpeed * Time.deltaTime);
-
-        // if (isStopEndRoll)
-        // {
-        //     // endRollCoroutne = StartCoroutine(GoToStartScene());
-        // }
-        // else
-        // {
-        //     // //テキストがリミットを超えるまで動かす
-        //     // if (transform.position.y <= limitPosition)
-        //     // {
-        //     //     transform.position = new Vector2(transform.position.x,
-        //     //         transform.position.y + textScrollSpeed * Time.deltaTime);
-        //     // }
-        //     // else
-        //     // {
-        //     //     isStopEndRoll = true;
-        //     // }
-        // }
+        }
     }
 
     void OnTriggerEnter(Collider other)
     {
         Debug.Log("TriggerEnter");
+        isStopEndRoll = true;
     }
 
     IEnumerator GoToStartScene()
@@ -65,7 +51,7 @@ public class Ending_Endroll : MonoBehaviour
         if (Input.GetKeyDown("space"))
         {
             StopCoroutine(endRollCoroutne);
-            SceneManager.LoadScene("Main");
+            SceneManager.LoadScene("Main"); //シーン遷移のお試しにMainへ飛ぶ
         }
 
         yield return null;
