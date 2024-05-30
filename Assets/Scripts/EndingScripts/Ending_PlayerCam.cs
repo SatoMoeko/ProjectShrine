@@ -8,6 +8,7 @@ public class Ending_Camera : MonoBehaviour
     public float sensY;
 
     public Transform orientation;
+    // public Transform playerRotation;
     public Transform CamHolder;
 
     float xRotation;
@@ -29,12 +30,14 @@ public class Ending_Camera : MonoBehaviour
         yRotation += mouseX;
         xRotation -= mouseY;
 
-        //y軸方向のみ視点に上限
+        //y方向のみ視点に上限
         xRotation = Mathf.Clamp(xRotation, -90, 90);
 
         //カメラとプレイヤーの向きを動かす
         CamHolder.rotation = Quaternion.Euler(xRotation, yRotation, 0);
         orientation.rotation = Quaternion.Euler(0, yRotation, 0);
+        // playerRotation.rotation = Quaternion.Euler(0, yRotation, 0);
+
     }
 
     public void CursorLocked()

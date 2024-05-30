@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
+//ending内での動作テスト用
+//作成途中
 
-//endingのテスト用
-//途中
 public class Ending_PlayerController : MonoBehaviour
 {
     //オブジェクト
@@ -36,6 +36,7 @@ public class Ending_PlayerController : MonoBehaviour
 
     void Update()
     {
+        LineOfSight();
     }
 
 
@@ -66,6 +67,12 @@ public class Ending_PlayerController : MonoBehaviour
 
         //移動処理
         rb.AddForce(rb.mass * velocity / Time.fixedDeltaTime, ForceMode.Force);
+    }
+
+    //orientation：プレイヤー視線に合わせて体の向きを変える
+    void LineOfSight()
+    {
+        transform.rotation = orientation.rotation;
     }
 
 }
