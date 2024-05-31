@@ -18,36 +18,23 @@ public class Ending_PlayerController : MonoBehaviour
     Vector3 velocity; //移動速度
     Vector3 moveInput; //移動の入力値
     Vector3 moveDirection; //実際の移動距離
-    Quaternion lookNow; //見ている方向
     public float walkSpeed = 3f; //歩行速度
-
-
-    //判定関係
-    bool isGrounded; //接地しているか
-
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         //回転を制限
-        // rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
         rb.freezeRotation = true;
     }
 
     void Update()
     {
-        LineOfSight();
     }
 
 
     void FixedUpdate()
     {
         MovePlayer();
-    }
-
-    void KeyChecked()
-    {
-
     }
 
     void MovePlayer()
