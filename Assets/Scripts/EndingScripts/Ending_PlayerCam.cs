@@ -15,7 +15,7 @@ public class Ending_Camera : MonoBehaviour
     float yRotation;
 
 
-    void Update()
+    void FixedUpdate()
     {
         LookAround();
         CursorLocked();
@@ -49,9 +49,9 @@ public class Ending_Camera : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(1))
         {
-            //左クリックでマウスポインタ中央固定、不可視化
+            //右クリックでマウスポインタ中央固定、不可視化
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
