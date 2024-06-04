@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 //エンディング分岐のトリガー
 //接触したらプレイヤー停止、二択を選ぶ
@@ -8,8 +9,8 @@ public class EndingEventTrigger : MonoBehaviour
 {
     //エンディング分岐パネル
     public GameObject selectEndingPanel;
+    public GameObject player;
 
-    EndingSceneController esc;
 
     private void Awake()
     {
@@ -31,7 +32,10 @@ public class EndingEventTrigger : MonoBehaviour
         Panel_NotActive();
 
         //この後、プレイヤーは振り返って異変とご対面
-        esc.LookBack();
+        //プレイヤー(0,0,0)、背後を左回りで振り返る
+        player.transform.DORotate(new Vector3(0, -180, 0), 6f).SetEase(Ease.InOutSine).SetDelay(2f);
+
+        //ご対面したらエンドロールへ
     }
 
     public void NotlookBackTorigger()
@@ -41,7 +45,10 @@ public class EndingEventTrigger : MonoBehaviour
         //パネル非表示
         Panel_NotActive();
 
-        //この後、参拝するムービー
+        //この後、参拝するムービー再生
+
+        //ムービー再生したらエンドロールへ
+
     }
 
     void Panel_NotActive()

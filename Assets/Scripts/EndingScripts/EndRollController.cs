@@ -52,10 +52,10 @@ public class EndRollController : MonoBehaviour
         music = GetComponent<AudioSource>();
 
         //エンドロールの内容をテキストファイルから取得
-        // text = TextFileReader.ContentOfTxtFile(@"Assets\Scripts\EndingScripts\EndrollText.txt");
+        text = TextFileReader.ContentOfTxtFile(@"Assets\Scripts\EndingScripts\EndrollText.txt");
 
-        // //取得した内容をtextに渡す
-        // endRollText.text = text;
+        //取得した内容をtextに渡す
+        endRollText.text = text;
         // Debug.Break();
     }
 
@@ -70,10 +70,10 @@ public class EndRollController : MonoBehaviour
         SetPosition();
 
         // //確認用
-        Debug.Log(endRollTitle.rectTransform.anchoredPosition);
-        Debug.Log(endRollText.rectTransform.anchoredPosition);
-        Debug.Log(endRollMsg.rectTransform.anchoredPosition);
-        Debug.Break();
+        // Debug.Log(endRollTitle.rectTransform.anchoredPosition);
+        // Debug.Log(endRollText.rectTransform.anchoredPosition);
+        // Debug.Log(endRollMsg.rectTransform.anchoredPosition);
+        // Debug.Break();
 
         //ED再生
         music.Play();

@@ -30,19 +30,12 @@ public class EndingSceneController : MonoBehaviour
 
     private void Awake()
     {
-        //プレイヤー操作を受け付けない設定にする
+
     }
 
     private void Start()
     {
-        //プレイヤー(0,0,6)、trigger(0,1,21)の位置まで移動する
-        player.transform.DOMove(new Vector3(0f, 1f, 21f), 6f);
+        //プレイヤー(0,1,6)、trigger(0,1,21)の位置まで移動する
+        player.transform.DOMove(new Vector3(0f, 1f, 21f), 7f);
     }
-
-    public void LookBack()
-    {
-        //プレイヤー(0,0,0)、背後を左回りで振り返る
-        player.transform.DORotate(new Vector3(0, -180, 0), 6f).SetEase(Ease.InOutSine).SetDelay(3f);
-    }
-
 }
