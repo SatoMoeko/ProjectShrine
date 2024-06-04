@@ -61,5 +61,4 @@ public class Ending_PlayerController : MonoBehaviour
     {
         transform.rotation = orientation.rotation;
     }
-
 }
