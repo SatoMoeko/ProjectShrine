@@ -31,7 +31,8 @@ public class Ending_Camera : MonoBehaviour
         xRotation -= mouseY;
 
         //y方向のみ視点に上限
-        xRotation = Mathf.Clamp(xRotation, -90, 90);
+        xRotation = Mathf.Clamp(xRotation, -60, 60);
+        yRotation = Mathf.Clamp(yRotation, -135, 135);
 
         //カメラとプレイヤーの向きを動かす
         CamHolder.rotation = Quaternion.Euler(xRotation, yRotation, 0);
