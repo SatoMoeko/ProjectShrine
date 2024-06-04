@@ -1,4 +1,3 @@
-//エンドロール内容、作成中 //このコメントは後で削除
 <size=70><color=red>Team-B</color></size>
 sato
 tsuru

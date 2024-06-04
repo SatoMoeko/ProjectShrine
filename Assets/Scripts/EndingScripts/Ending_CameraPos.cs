@@ -5,7 +5,7 @@ using UnityEngine;
 public class Ending_CameraPos : MonoBehaviour
 {
     public Transform cameraPos;
-    void Update()
+    void FixedUpdate()
     {
         transform.position = cameraPos.position;
     }
