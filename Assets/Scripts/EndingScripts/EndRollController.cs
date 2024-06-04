@@ -28,7 +28,7 @@ public class EndRollController : MonoBehaviour
 
     //画面の縦横のサイズ
     float screenHeight;
-    // float screenWidth;
+    float screenWidth;
 
     //エンドロールの内容を取得するためのもの
     string text;
@@ -52,6 +52,7 @@ public class EndRollController : MonoBehaviour
         //画面のサイズを取得
         //currentResolutionある方がいいのか？ない方がいいのか？
         screenHeight = Screen.height;
+        screenWidth = Screen.width;
 
         //ED曲取得
         music = GetComponent<AudioSource>();
