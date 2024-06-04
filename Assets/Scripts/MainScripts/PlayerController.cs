@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float RotateSpeed = 1.5f;
-    public float MoveSpeed = 7.0f;
+    public float RotateSpeed = 3f;
+    public float MoveSpeed = 2f;
 
     Vector3 Pos_Player = Vector2.zero;
     Vector3 Rot_Player = Vector2.zero;
