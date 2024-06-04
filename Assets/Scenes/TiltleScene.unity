@@ -884,6 +884,7 @@ GameObject:
   - component: {fileID: 1725955868}
   - component: {fileID: 1725955871}
   - component: {fileID: 1725955872}
+  - component: {fileID: 1725955873}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -1016,8 +1017,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2e064ab784ec604688d08a030dcef36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DurationSeconds: 1.65
-  EaseType: 9
+  DurationSeconds: 1
+  EaseType: 0
 --- !u!225 &1725955872
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1030,6 +1031,20 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1725955873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725955866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2e064ab784ec604688d08a030dcef36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DurationSeconds: 1
+  EaseType: 0
 --- !u!1 &1782682215
 GameObject:
   m_ObjectHideFlags: 0
