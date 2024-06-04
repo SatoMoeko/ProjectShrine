@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 
 
 //エンドロールのコントロール
-//作成中
-//残り作業 textの中身をテキストファイルから取得して表示する
+//ほぼ完成
 
 public class EndRollController : MonoBehaviour
 {
+    //エンドロールパネル
+    public GameObject endRollPanel;
+
     //ED曲
     AudioSource music;
 
@@ -45,8 +47,11 @@ public class EndRollController : MonoBehaviour
 
     void Awake()
     {
+        // endRollPanel.SetActive(true);
+
         //画面のサイズを取得
-        screenHeight = Screen.currentResolution.height;
+        //currentResolutionある方がいいのか？ない方がいいのか？
+        screenHeight = Screen.height;
 
         //ED曲取得
         music = GetComponent<AudioSource>();
@@ -70,10 +75,10 @@ public class EndRollController : MonoBehaviour
         SetPosition();
 
         // //確認用
-        // Debug.Log(endRollTitle.rectTransform.anchoredPosition);
-        // Debug.Log(endRollText.rectTransform.anchoredPosition);
-        // Debug.Log(endRollMsg.rectTransform.anchoredPosition);
-        // Debug.Break();
+        Debug.Log(endRollTitle.rectTransform.anchoredPosition);
+        Debug.Log(endRollText.rectTransform.anchoredPosition);
+        Debug.Log(endRollMsg.rectTransform.anchoredPosition);
+        Debug.Break();
 
         //ED再生
         music.Play();
