@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     Vector3 Pos_Player = Vector2.zero;
     Vector3 Rot_Player = Vector2.zero;
 
+    public GameObject sushi;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +36,10 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             Pos_Player -= transform.right * MoveSpeed * Time.deltaTime;
+        }
+        if (Input.GetKey(KeyCode.E))
+        {
+            sushi.SetActive(true);
         }
 
         transform.position = Pos_Player;

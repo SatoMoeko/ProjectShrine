@@ -14,6 +14,7 @@ public class Ending_Camera : MonoBehaviour
     float xRotation;
     float yRotation;
 
+
     void Update()
     {
         LookAround();

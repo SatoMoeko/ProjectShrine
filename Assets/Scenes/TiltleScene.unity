@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17508823, g: 0.08376233, b: 0.08320326, a: 1}
+  m_IndirectSpecularColor: {r: 0.17508811, g: 0.083764285, b: 0.08319887, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -291,6 +291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DurationSeconds: 1.65
   EaseType: 9
+  canvasGroup: {fileID: 0}
 --- !u!114 &550460058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -419,8 +420,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -29.1059, y: 2.7509}
-  m_SizeDelta: {x: 1682.8263, y: 822.8692}
+  m_AnchoredPosition: {x: -0.0047684, y: 0.00059319}
+  m_SizeDelta: {x: 1370, y: 770}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &557808876
 MonoBehaviour:
@@ -1017,8 +1018,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2e064ab784ec604688d08a030dcef36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DurationSeconds: 1
-  EaseType: 0
+  DurationSeconds: 1.65
+  EaseType: 9
+  canvasGroup: {fileID: 0}
 --- !u!225 &1725955872
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1040,7 +1042,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1725955866}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2e064ab784ec604688d08a030dcef36, type: 3}
+  m_Script: {fileID: 11500000, guid: e0619b6b80f7b35499ab28ff4f5c44f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   DurationSeconds: 1
@@ -1239,6 +1241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DurationSeconds: 30
   EaseType: 9
+  canvasGroup: {fileID: 0}
 --- !u!114 &1959690379
 MonoBehaviour:
   m_ObjectHideFlags: 0
