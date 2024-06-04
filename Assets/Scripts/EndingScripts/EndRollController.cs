@@ -49,10 +49,9 @@ public class EndRollController : MonoBehaviour
     {
         // endRollPanel.SetActive(true);
 
-        //画面のサイズを取得
-        //currentResolutionある方がいいのか？ない方がいいのか？
-        screenHeight = Screen.height;
-        screenWidth = Screen.width;
+        // //画面のサイズを取得
+        // screenHeight = Screen.height;
+        // screenWidth = Screen.width;
 
         //ED曲取得
         music = GetComponent<AudioSource>();
@@ -67,11 +66,18 @@ public class EndRollController : MonoBehaviour
 
     void Start()
     {
+        //画面のサイズを取得
+        //currentResolutionある方がいいのか？ない方がいいのか？
+        screenHeight = Screen.height;
+        screenWidth = Screen.width;
+
+        Debug.Log(screenHeight);
+        Debug.Break();
+
         //テキストボックスのサイズ取得
         titleBoxSize = endRollTitle.preferredHeight;
         textBoxSize = endRollText.preferredHeight;
         msgBoxSize = endRollMsg.preferredHeight;
-
         //全テキストボックスの位置を調整
         SetPosition();
 
@@ -137,11 +143,18 @@ public class EndRollController : MonoBehaviour
             endRoll.transform.position.y + textScrollSpeed * Time.deltaTime);
     }
 
+    //UI座標⇔ワールド座標
+
+
     //初期位置設定
     void SetPosition()
     {
         //titleの位置、画面中央
-        float Ycenter = screenHeight / 2 - titleBoxSize / 2;
+        float Ycenter = screenHeight / 2;
+
+        // Debug.Log(Ycenter);
+        // Debug.Break();
+
         endRollTitle.rectTransform.anchoredPosition = new Vector2(0, -Ycenter);
 
         //textの位置、下辺中央
