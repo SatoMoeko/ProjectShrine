@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17508811, g: 0.083764285, b: 0.08319887, a: 1}
+  m_IndirectSpecularColor: {r: 0.17508823, g: 0.08376233, b: 0.08320326, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -592,6 +592,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6547521750766764129, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
   m_PrefabInstance: {fileID: 593364924}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &647781526 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8397022371453114954, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
+  m_PrefabInstance: {fileID: 593364924}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &816662456
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1053,6 +1058,11 @@ Transform:
   - {fileID: 593364925}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1397877467 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8397022371453114954, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
+  m_PrefabInstance: {fileID: 816662456}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1641554031
 GameObject:
   m_ObjectHideFlags: 0
@@ -2188,10 +2198,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 1641554036}
   stageChips:
-  - {fileID: 8397022371453114954, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
+  - {fileID: 8397022371453114954, guid: 2dd0e695a695bab4ab0008d1e9ac073d, type: 3}
+  - {fileID: 8397022371453114954, guid: c9a973bd7fa7f714995a92d80b3fc734, type: 3}
+  - {fileID: 8397022371453114954, guid: 0a0934ac71900b14dbf553bd6c11fe19, type: 3}
+  - {fileID: 8397022371453114954, guid: 2ea5b073dd40581479a28bc4c3df2ea8, type: 3}
+  - {fileID: 8397022371453114954, guid: 2ea5b073dd40581479a28bc4c3df2ea8, type: 3}
   startChipIndex: 1
   preInstantiate: 3
-  generatedStageList: []
+  generatedStageList:
+  - {fileID: 1397877467}
+  - {fileID: 647781526}
 --- !u!4 &2117642244
 Transform:
   m_ObjectHideFlags: 0
