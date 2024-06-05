@@ -43,6 +43,10 @@ public class EndingSceneController : MonoBehaviour
 
     private void Start()
     {
+        //マウスポインタ中央固定、不可視化
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
         //プレイヤー(0,1,6)、trigger(0,1,21)の位置まで移動する
         player.transform.DOMove(new Vector3(0f, 1f, 21f), 7f);
     }
@@ -50,6 +54,9 @@ public class EndingSceneController : MonoBehaviour
     //振り返るを選択
     public void LookBackTrigger()
     {
+        //マウスポインタ不可視化
+        Cursor.visible = false;
+
         Debug.Log("振り返る");
 
         //パネル非表示
@@ -62,6 +69,8 @@ public class EndingSceneController : MonoBehaviour
 
     public void NotlookBackTorigger()
     {
+        //マウスポインタ不可視化
+        Cursor.visible = false;
         Debug.Log("振り返らない");
 
         //パネル非表示
@@ -84,8 +93,8 @@ public class EndingSceneController : MonoBehaviour
         //プレイヤー(0,0,0)、1秒後に背後を左回りで振り返る
         player.transform.DORotate(new Vector3(0, -180, 0), 6f).SetEase(Ease.InOutSine).SetDelay(2f);
 
-        //DOTween含め11秒待ってからエンドロールへ
-        yield return new WaitForSeconds(11F);
+        //DOTween含め10秒待ってからエンドロールへ
+        yield return new WaitForSeconds(10F);
 
         //エンドロール再生
         endRollPanel.SetActive(true);
