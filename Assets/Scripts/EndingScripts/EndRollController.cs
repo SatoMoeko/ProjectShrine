@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,6 +11,8 @@ using UnityEngine.SceneManagement;
 
 public class EndRollController : MonoBehaviour
 {
+    //キャンバス取得
+    public RectTransform endRollCanvas;
     //エンドロールパネル
     public GameObject endRollPanel;
 
@@ -20,18 +23,18 @@ public class EndRollController : MonoBehaviour
     public TextMeshProUGUI endRollTitle;
     public TextMeshProUGUI endRollText;
     public TextMeshProUGUI endRollMsg;
+    public TextMeshProUGUI keyInfo;
 
     //テキストボックスのサイズ取得
     float titleBoxSize;
     float textBoxSize;
     float msgBoxSize;
 
-    //画面の縦横のサイズ
-    float screenHeight;
-    float screenWidth;
+    // //画面の縦のサイズ
+    // float screenHeight;
 
-    //エンドロールの内容を取得するためのもの
-    string text;
+    //キャンバスの縦サイズ
+    float canvasHeight;
 
     //テキストのスクロールスピード
     public float textScrollSpeed = 30f;
@@ -47,29 +50,20 @@ public class EndRollController : MonoBehaviour
 
     void Awake()
     {
-        // endRollPanel.SetActive(true);
-
-        // //画面のサイズを取得
-        // screenHeight = Screen.height;
-        // screenWidth = Screen.width;
-
         //ED曲取得
         music = GetComponent<AudioSource>();
-
-        // //エンドロールの内容をテキストファイルから取得
-        // text = TextFileReader.ContentOfTxtFile(@"Assets\Scripts\EndingScripts\EndrollText.txt");
-
-        // //取得した内容をtextに渡す
-        // endRollText.text = text;
-        // Debug.Break();
+        keyInfo.enabled = false;
     }
 
     void Start()
     {
         //画面のサイズを取得
         //currentResolutionある方がいいのか？ない方がいいのか？
-        screenHeight = Screen.currentResolution.height;
-        screenWidth = Screen.width;
+        // screenHeight = Screen.height;
+
+        //キャンバスの縦サイズ取得
+        canvasHeight = endRollCanvas.rect.height;
+        Debug.Log("canvasY" + canvasHeight);
 
         // Debug.Log(screenHeight);
         // Debug.Break();
@@ -105,7 +99,7 @@ public class EndRollController : MonoBehaviour
         //テキスト:isOutTitle:trueかつisOutText:falseならtextのスクロール実行
         if (isOutTitle && !isOutText)
         {
-            float limit = textBoxSize + screenHeight / 2;
+            float limit = textBoxSize + canvasHeight / 2;
             if (limit <= endRollText.rectTransform.localPosition.y)
             {
                 //画面上辺中央にきたらfalse
@@ -165,12 +159,17 @@ public class EndRollController : MonoBehaviour
         endRollTitle.rectTransform.localPosition = new Vector3(0, center, 0);
 
         //テキストの位置、下辺中央
-        float bottom = screenHeight / 2;
+        float bottom = canvasHeight / 2;
+        Debug.Log("画面縦サイズ" + canvasHeight);
+        Debug.Log("画面の半分" + bottom);
+
+
         endRollText.rectTransform.localPosition = new Vector3(0, -bottom, 0);
 
         //メッセージの位置、下辺中央
         endRollMsg.rectTransform.localPosition = new Vector3(0, -bottom, 0);
-        Debug.Break();
+
+        // Debug.Break();
     }
 
     //タイトルを五秒待った後にスクロールさせ、画面外に出たらたたむ
@@ -179,8 +178,10 @@ public class EndRollController : MonoBehaviour
         //３秒まつ
         yield return new WaitForSeconds(3f);
 
+        keyInfo.enabled = true;
+
         //画面外に出たら
-        float limit = titleBoxSize + screenHeight / 2;
+        float limit = titleBoxSize + canvasHeight / 2;
         if (limit <= endRollTitle.rectTransform.anchoredPosition.y)
         {
             //フラグをtrue

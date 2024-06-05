@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 //エンディングシーンのコントロールを行う
 /*
 エンディングシーンでの演出
-・プレイヤー：自動的にtriggerまで移動する、歩行および視点移動を受け付けない
+・プレイヤー：自動的にtriggerまで移動
 ・triggerに接触したらプレイヤー停止、目の前に二択が出現
     ∟　1：振り返る→左回りでゆっくり視点移動、鳥居の方を向く→出会った異変たちとご対面
     ∟　2：振り返らない→お参りするムービー
@@ -16,9 +16,6 @@ using UnityEngine.EventSystems;
 
 public class EndingSceneController : MonoBehaviour
 {
-    //イベントシステム
-    public EventSystem es;
-
     //プレイヤー
     public GameObject player;
 

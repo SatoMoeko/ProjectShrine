@@ -11,7 +11,7 @@ public class Setting_EndrollText : MonoBehaviour
 
     string text;
 
-    void Start()
+    void Awake()
     {
         text = TextFileReader.ContentOfTxtFile(@"Assets\Scripts\EndingScripts\EndrollText.txt");
 

@@ -21,7 +21,7 @@ public class TextFileReader : MonoBehaviour
         using (var file = new StreamReader(path, Encoding.UTF8))
         {
             content = file.ReadToEnd();
-            Debug.Log("completed");
+            // Debug.Log("completed");
         }
         return content;
     }
