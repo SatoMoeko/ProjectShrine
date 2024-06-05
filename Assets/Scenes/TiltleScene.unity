@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17508811, g: 0.083764285, b: 0.08319887, a: 1}
+  m_IndirectSpecularColor: {r: 0.17508823, g: 0.08376233, b: 0.08320326, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -289,9 +289,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2e064ab784ec604688d08a030dcef36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DurationSeconds: 1.65
-  EaseType: 9
-  canvasGroup: {fileID: 0}
 --- !u!114 &550460058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1018,9 +1015,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2e064ab784ec604688d08a030dcef36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DurationSeconds: 1.65
-  EaseType: 9
-  canvasGroup: {fileID: 0}
 --- !u!225 &1725955872
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1057,6 +1051,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1782682217}
   - component: {fileID: 1782682216}
+  - component: {fileID: 1782682219}
+  - component: {fileID: 1782682218}
   m_Layer: 0
   m_Name: BGM
   m_TagString: Untagged
@@ -1175,6 +1171,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1782682218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782682215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a20fffc8b55b2f64497dc6df5a48858e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1782682219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782682215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1746123ff5ac3f64993e5289fcc6b25e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BGMaudioSource: {fileID: 0}
+  SEaudioSource: {fileID: 0}
+  BGMs: []
+  SEs: []
+  Opened_Audio_Setting: 0
 --- !u!1 &1959690375
 GameObject:
   m_ObjectHideFlags: 0
@@ -1239,9 +1264,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2e064ab784ec604688d08a030dcef36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DurationSeconds: 30
-  EaseType: 9
-  canvasGroup: {fileID: 0}
 --- !u!114 &1959690379
 MonoBehaviour:
   m_ObjectHideFlags: 0
