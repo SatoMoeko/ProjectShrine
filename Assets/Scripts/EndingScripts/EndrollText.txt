@@ -16,12 +16,6 @@ sato
 tsuru
 
 
-<size=70><color=red>programming</color></size>
-sato
-tsuru
-mita
-
-
 <size=70><color=red>design</color></size>
 
 <size=50>-Title-</size>
