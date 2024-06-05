@@ -28,7 +28,7 @@ public class EndRollController : MonoBehaviour
     float screenHeight;
     // float screenWidth;
 
-    //エンドロールの内容を取得する変数
+    //エンドロールの内容を取得するためのもの
     string text;
 
     //テキストのスクロールスピード
@@ -52,6 +52,11 @@ public class EndRollController : MonoBehaviour
         music = GetComponent<AudioSource>();
 
         //エンドロールの内容をテキストファイルから取得
+        text = TextFileReader.ContentOfTxtFile(@"Assets\Scripts\EndingScripts\EndrollText.txt");
+
+        //取得した内容をtextに渡す
+        endRollText.text = text;
+        // Debug.Break();
     }
 
     void Start()
@@ -65,9 +70,9 @@ public class EndRollController : MonoBehaviour
         SetPosition();
 
         // //確認用
-        // Debug.Log(endRollTitle.transform.localPosition);
-        // Debug.Log(endRollText.transform.localPosition);
-        // Debug.Log(endRollMsg.transform.localPosition);
+        // Debug.Log(endRollTitle.rectTransform.anchoredPosition);
+        // Debug.Log(endRollText.rectTransform.anchoredPosition);
+        // Debug.Log(endRollMsg.rectTransform.anchoredPosition);
         // Debug.Break();
 
         //ED再生
@@ -140,7 +145,7 @@ public class EndRollController : MonoBehaviour
         endRollMsg.rectTransform.anchoredPosition = new Vector2(0, -screenHeight);
     }
 
-    //タイトルを五秒待った後にスクロールさせ、画面買いに出たらたたむ
+    //タイトルを五秒待った後にスクロールさせ、画面外に出たらたたむ
     IEnumerator StartEndRollTitle()
     {
         //5秒まつ
@@ -161,7 +166,8 @@ public class EndRollController : MonoBehaviour
             ScrollStart(endRollTitle);
         }
 
-        yield break;
+        //コルーチン停止
+        StopCoroutine(endRollTitleCoroutine);
     }
 
     //五秒停止後、タイトルシーンへ移行

@@ -14,10 +14,10 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 0.37254903, g: 0.3137255, b: 0.3254902, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogDensity: 0.07
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -469,7 +469,7 @@ Transform:
   m_GameObject: {fileID: 585433756}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.1, y: 59.05, z: 76.64}
+  m_LocalPosition: {x: -9.6, y: 61.31, z: 79.54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -634,7 +634,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6547521750766764129, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -69.9
+      value: -69.3
       objectReference: {fileID: 0}
     - target: {fileID: 6547521750766764129, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1085,8 +1085,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0642a2622275a414eb8ac9ca3e96db34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RotateSpeed: 1.5
-  MoveSpeed: 7
+  RotateSpeed: 3
+  MoveSpeed: 2
   sushi: {fileID: 4796540730985880631}
 --- !u!136 &1641554033
 CapsuleCollider:
@@ -2190,7 +2190,7 @@ MonoBehaviour:
   stageChips:
   - {fileID: 8397022371453114954, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
   startChipIndex: 1
-  preInstantiate: 5
+  preInstantiate: 3
   generatedStageList: []
 --- !u!4 &2117642244
 Transform:
