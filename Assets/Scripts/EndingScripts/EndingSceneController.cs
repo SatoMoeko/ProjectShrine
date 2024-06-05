@@ -59,8 +59,6 @@ public class EndingSceneController : MonoBehaviour
         Panel_NotActive();
 
         StartCoroutine(E_LookBackCoroutine());
-        // //プレイヤー(0,0,0)、1秒後に背後を左回りで振り返る
-        // player.transform.DORotate(new Vector3(0, -180, 0), 6f).SetEase(Ease.InOutSine).SetDelay(1f);
 
         //ご対面したらエンドロールへ
     }

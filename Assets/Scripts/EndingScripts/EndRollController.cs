@@ -56,11 +56,11 @@ public class EndRollController : MonoBehaviour
         //ED曲取得
         music = GetComponent<AudioSource>();
 
-        //エンドロールの内容をテキストファイルから取得
-        text = TextFileReader.ContentOfTxtFile(@"Assets\Scripts\EndingScripts\EndrollText.txt");
+        // //エンドロールの内容をテキストファイルから取得
+        // text = TextFileReader.ContentOfTxtFile(@"Assets\Scripts\EndingScripts\EndrollText.txt");
 
-        //取得した内容をtextに渡す
-        endRollText.text = text;
+        // //取得した内容をtextに渡す
+        // endRollText.text = text;
         // Debug.Break();
     }
 
@@ -68,24 +68,19 @@ public class EndRollController : MonoBehaviour
     {
         //画面のサイズを取得
         //currentResolutionある方がいいのか？ない方がいいのか？
-        screenHeight = Screen.height;
+        screenHeight = Screen.currentResolution.height;
         screenWidth = Screen.width;
 
-        Debug.Log(screenHeight);
-        Debug.Break();
+        // Debug.Log(screenHeight);
+        // Debug.Break();
 
         //テキストボックスのサイズ取得
         titleBoxSize = endRollTitle.preferredHeight;
         textBoxSize = endRollText.preferredHeight;
         msgBoxSize = endRollMsg.preferredHeight;
+
         //全テキストボックスの位置を調整
         SetPosition();
-
-        // //確認用
-        Debug.Log(endRollTitle.rectTransform.anchoredPosition);
-        Debug.Log(endRollText.rectTransform.anchoredPosition);
-        Debug.Log(endRollMsg.rectTransform.anchoredPosition);
-        Debug.Break();
 
         //ED再生
         music.Play();
@@ -93,6 +88,12 @@ public class EndRollController : MonoBehaviour
 
     void Update()
     {
+        //スペースキー
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            endRollMsgCoroutine = StartCoroutine(GoToStartScene());
+        }
+
         //エンドロールを下から上にスクロール
         //タイトルのスクロール
         if (!isOutTitle)
@@ -104,13 +105,15 @@ public class EndRollController : MonoBehaviour
         //テキスト:isOutTitle:trueかつisOutText:falseならtextのスクロール実行
         if (isOutTitle && !isOutText)
         {
-            if (textBoxSize <= endRollText.rectTransform.anchoredPosition.y)
+            float limit = textBoxSize + screenHeight / 2;
+            if (limit <= endRollText.rectTransform.localPosition.y)
             {
                 //画面上辺中央にきたらfalse
                 isOutText = true;
                 //画面外に出たらオブジェクトをたたむ
                 endRollText.enabled = false;
             }
+
             //スクロール
             ScrollStart(endRollText);
         }
@@ -120,12 +123,11 @@ public class EndRollController : MonoBehaviour
         if (isOutTitle && isOutText && !isStopMsg)
         {
             //中央で止まる
-            float Ycenter = screenHeight / 2 - msgBoxSize / 2;
-            if (endRollMsg.rectTransform.anchoredPosition.y >= -Ycenter)
+            if (endRollMsg.rectTransform.localPosition.y >= 0)
             {
                 isStopMsg = true;
-
             }
+
             ScrollStart(endRollMsg);
 
 
@@ -139,8 +141,17 @@ public class EndRollController : MonoBehaviour
     //スクロールをする
     void ScrollStart(TextMeshProUGUI endRoll)
     {
-        endRoll.transform.position = new Vector2(endRoll.transform.position.x,
-            endRoll.transform.position.y + textScrollSpeed * Time.deltaTime);
+        //スペースキーで早送り：３倍速
+        if (Input.GetKey(KeyCode.LeftShift) | Input.GetKey(KeyCode.RightShift))
+        {
+            endRoll.transform.position = new Vector2(endRoll.transform.position.x,
+            endRoll.transform.position.y + textScrollSpeed * 3 * Time.deltaTime);
+        }
+        else
+        {
+            endRoll.transform.position = new Vector2(endRoll.transform.position.x,
+                endRoll.transform.position.y + textScrollSpeed * Time.deltaTime);
+        }
     }
 
     //UI座標⇔ワールド座標
@@ -149,29 +160,28 @@ public class EndRollController : MonoBehaviour
     //初期位置設定
     void SetPosition()
     {
-        //titleの位置、画面中央
-        float Ycenter = screenHeight / 2;
+        //タイトル位置
+        float center = titleBoxSize / 2;
+        endRollTitle.rectTransform.localPosition = new Vector3(0, center, 0);
 
-        // Debug.Log(Ycenter);
-        // Debug.Break();
+        //テキストの位置、下辺中央
+        float bottom = screenHeight / 2;
+        endRollText.rectTransform.localPosition = new Vector3(0, -bottom, 0);
 
-        endRollTitle.rectTransform.anchoredPosition = new Vector2(0, -Ycenter);
-
-        //textの位置、下辺中央
-        endRollText.rectTransform.anchoredPosition = new Vector2(0, -screenHeight);
-
-        //msgの位置、下辺中央
-        endRollMsg.rectTransform.anchoredPosition = new Vector2(0, -screenHeight);
+        //メッセージの位置、下辺中央
+        endRollMsg.rectTransform.localPosition = new Vector3(0, -bottom, 0);
+        Debug.Break();
     }
 
     //タイトルを五秒待った後にスクロールさせ、画面外に出たらたたむ
     IEnumerator StartEndRollTitle()
     {
-        //5秒まつ
-        yield return new WaitForSeconds(5f);
+        //３秒まつ
+        yield return new WaitForSeconds(3f);
 
         //画面外に出たら
-        if (titleBoxSize <= endRollTitle.rectTransform.anchoredPosition.y)
+        float limit = titleBoxSize + screenHeight / 2;
+        if (limit <= endRollTitle.rectTransform.anchoredPosition.y)
         {
             //フラグをtrue
             isOutTitle = true;
@@ -192,12 +202,12 @@ public class EndRollController : MonoBehaviour
     //五秒停止後、タイトルシーンへ移行
     IEnumerator GoToStartScene()
     {
-        //5秒停止
-        yield return new WaitForSeconds(5f);
+        //3秒停止
+        yield return new WaitForSeconds(3f);
 
         //コルーチン停止とタイトル遷移
         StopCoroutine(endRollMsgCoroutine);
-        SceneManager.LoadScene("TiltleScene"); //誤字！
+        SceneManager.LoadScene("TiltleScene");
     }
 
 }
