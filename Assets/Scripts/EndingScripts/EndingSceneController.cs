@@ -84,8 +84,8 @@ public class EndingSceneController : MonoBehaviour
         //プレイヤー(0,0,0)、1秒後に背後を左回りで振り返る
         player.transform.DORotate(new Vector3(0, -180, 0), 6f).SetEase(Ease.InOutSine).SetDelay(2f);
 
-        //DOTween含め10秒待ってからエンドロールへ
-        yield return new WaitForSeconds(10F);
+        //DOTween含め11秒待ってからエンドロールへ
+        yield return new WaitForSeconds(11F);
 
         //エンドロール再生
         endRollPanel.SetActive(true);
