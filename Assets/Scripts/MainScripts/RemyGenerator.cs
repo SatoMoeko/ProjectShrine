@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SushiGenerator : MonoBehaviour
+public class RemyGenerator : MonoBehaviour
 {
     bool isEnter = false;
-    public GameObject sushi;
+    public GameObject remy;
 
     void OnTriggerEnter(Collider other)
     {
@@ -29,9 +29,9 @@ public class SushiGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isEnter && Input.GetKey(KeyCode.E))
+        if (isEnter)
         {
-            sushi.SetActive(true);
+            remy.SetActive(true);
         }
     }
 }
