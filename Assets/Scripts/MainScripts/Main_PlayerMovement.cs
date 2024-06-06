@@ -19,7 +19,7 @@ public class Main_PlayerMovement : MonoBehaviour
     Vector3 moveDirection;
 
     Rigidbody rb;
-    //public GameObject Sushi;
+    // public GameObject Sushi;
 
 
     void Start()
@@ -51,13 +51,13 @@ public class Main_PlayerMovement : MonoBehaviour
         movePlayer();
         // if (Input.GetKey(KeyCode.E))
         //{
-        //   Sushi.SetActive(true);
-        //}
+        //     Sushi.SetActive(true);
+        //  }
         //デバック用
-        //if (Input.GetKey(KeyCode.R))
-        //{
-        //  Sushi.SetActive(false);
-        //}
+        //  if (Input.GetKey(KeyCode.R))
+        //  {
+        //      Sushi.SetActive(false);
+        //  }
     }
 
 

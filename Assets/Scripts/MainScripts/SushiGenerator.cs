@@ -4,34 +4,43 @@ using UnityEngine;
 
 public class SushiGenerator : MonoBehaviour
 {
-    public GameObject sushiPrefab;
-    public GameObject Sara;
+    bool isEnter = false;
+
+    public GameObject sushi;
 
     void OnTriggerEnter(Collider other)
     {
+
+
         if (other.CompareTag("Player"))
         {
-            if (Input.GetKey(KeyCode.E))
-            {//sushiを生成
-                Instantiate(
-                    sushiPrefab,
-                    Sara.transform.position,
-                    Quaternion.identity
-                );
-            }
+
+            isEnter = true;
+
         }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+
+        isEnter = false;
+
 
     }
 
     // Start is called before the first frame update
     void Start()
     {
-
+        Debug.Log("start");
     }
 
     // Update is called once per frame
     void Update()
     {
 
+        if (isEnter && Input.GetKey(KeyCode.E))
+        {
+            sushi.SetActive(true);
+        }
     }
 }
