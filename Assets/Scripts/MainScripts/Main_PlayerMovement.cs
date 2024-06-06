@@ -19,13 +19,14 @@ public class Main_PlayerMovement : MonoBehaviour
     Vector3 moveDirection;
 
     Rigidbody rb;
-    public GameObject Sushi;
+    //public GameObject Sushi;
 
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+
     }
 
 
@@ -48,16 +49,18 @@ public class Main_PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         movePlayer();
-        if (Input.GetKey(KeyCode.E))
-        {
-            Sushi.SetActive(true);
-        }
+        // if (Input.GetKey(KeyCode.E))
+        //{
+        //   Sushi.SetActive(true);
+        //}
         //デバック用
-        if (Input.GetKey(KeyCode.R))
-        {
-            Sushi.SetActive(false);
-        }
+        //if (Input.GetKey(KeyCode.R))
+        //{
+        //  Sushi.SetActive(false);
+        //}
     }
+
+
 
 
     private void ProcessInput()
