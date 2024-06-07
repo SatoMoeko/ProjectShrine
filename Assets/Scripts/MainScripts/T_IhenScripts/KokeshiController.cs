@@ -1,0 +1,17 @@
+using System.Collections;
+using System.Collections.Generic;
+using DG.Tweening;
+using Unity.VisualScripting;
+using UnityEngine;
+
+public class KokeshiController : MonoBehaviour
+{
+    //看板を抜けると三秒後にこけしがひょっこりはん
+    public Transform kokeshi;
+
+    void OnTriggerEnter(Collider other)
+    {
+        // Debug.Log("入った");
+        kokeshi.transform.DOLocalRotate(new Vector3(0, 0, -25), 1f).SetEase(Ease.OutBounce).SetDelay(3f);
+    }
+}
