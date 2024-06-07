@@ -2,17 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KaminingyouController : MonoBehaviour
+//プレイヤーに処理を追加しないで実装できるようにする
+public class KaminingyouController : MonoBehaviour, IInteractable
 {
-    // Start is called before the first frame update
-    void Start()
+    public void Interact()
     {
-        
-    }
+        //インタラクト時の処理
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
