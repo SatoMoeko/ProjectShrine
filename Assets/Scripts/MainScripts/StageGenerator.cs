@@ -36,12 +36,10 @@ public class StageGenerator : MonoBehaviour
         {
             UpdateStage(charaPositionIndex + preInstantiate);
         }
-
-
     }
 
     //現在のステージチップのインデックス
-    int CharaStageChipIndex()
+    public int CharaStageChipIndex()
     {
         return (int)(character.position.z / StageChipSize);
     }

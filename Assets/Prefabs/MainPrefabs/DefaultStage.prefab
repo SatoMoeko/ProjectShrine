@@ -1436,7 +1436,7 @@ GameObject:
   - component: {fileID: 6547521750766764129}
   m_Layer: 0
   m_Name: DefaultStage
-  m_TagString: Untagged
+  m_TagString: DefaultStage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

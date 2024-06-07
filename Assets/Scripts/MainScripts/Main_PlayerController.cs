@@ -56,9 +56,11 @@ public class Main_PlayerController : MonoBehaviour
         ProcessInput();
         SpeedControl();
 
+
+
         //ポイント処理
         //いまプレイヤーがいるステージがdefaultのとき
-        // if (stageGenerator.NextStage() == 0)
+        // if (??????????)
         //{
         //    if (sushi.activeInHierarchy)
         //    {
