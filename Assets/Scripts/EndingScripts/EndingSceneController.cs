@@ -47,8 +47,9 @@ public class EndingSceneController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
-        //プレイヤー(0,1,6)、trigger(0,1,21)の位置まで移動する
-        player.transform.DOMove(new Vector3(0f, 1f, 21f), 7f);
+        //プレイヤー(0,1,6)、trigger(0,1,21)の位置まで移動する、タイムラインによる制御
+        // player.transform.DOMove(new Vector3(0f, 1f, 21f), 7f);
+
     }
 
     //振り返るを選択
