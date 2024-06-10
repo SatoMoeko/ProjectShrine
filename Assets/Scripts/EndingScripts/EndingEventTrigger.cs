@@ -12,6 +12,9 @@ public class EndingEventTrigger : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
         selectEndingCanvas.SetActive(true);
         Debug.Log("player接触");
     }
