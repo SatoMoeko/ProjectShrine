@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class StageGenerator : MonoBehaviour
@@ -8,11 +9,13 @@ public class StageGenerator : MonoBehaviour
 
     int currentChipIndex; //今作成されている一番先頭のチップの最大値
 
+
     public Transform character; //プレイヤーの位置
     public GameObject[] stageChips; //ステージチップの種類
     public int startChipIndex;
     public int preInstantiate; //前方にいくつつくっておくか
     public List<GameObject> generatedStageList = new List<GameObject>(); //出現させたステージチップの住所をリスト管理
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,8 +28,8 @@ public class StageGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //キャラクターの位置から現在のステージチップのインデックスを計算
-        int charaPositionIndex = (int)(character.position.z / StageChipSize);
+        //現在のステージチップのインデックス
+        int charaPositionIndex = CharaStageChipIndex();
 
         //次のステージチップに入ったらステージの更新処理をおこなう
         if (charaPositionIndex + preInstantiate > currentChipIndex)
@@ -35,6 +38,11 @@ public class StageGenerator : MonoBehaviour
         }
     }
 
+    //現在のステージチップのインデックス
+    public int CharaStageChipIndex()
+    {
+        return (int)(character.position.z / StageChipSize);
+    }
 
     //指定のindexまでのステージチップを生成して管理下に置く
     void UpdateStage(int toChipIndex)
@@ -57,10 +65,10 @@ public class StageGenerator : MonoBehaviour
     }
 
 
-    //指定のインデックス位置にStageオブジェクトをランダムに生成
+    //指定のインデックス位置にStageオブジェクトを生成
     GameObject GenerateStage(int chipIndex)
     {
-        int nextStageChip = Random.Range(0, stageChips.Length);
+        int nextStageChip = NextStage();
 
         GameObject stageObject = Instantiate(
             stageChips[nextStageChip],
@@ -68,6 +76,12 @@ public class StageGenerator : MonoBehaviour
             Quaternion.identity
         );
         return stageObject;
+    }
+
+    //Stageオブジェクトのリスト番号をランダムにピックアップ
+    public int NextStage()
+    {
+        return Random.Range(0, stageChips.Length);
     }
 
     //一番古いステージを削除

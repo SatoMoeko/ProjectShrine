@@ -6,12 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Ending-T.unity
-    guid: 7b4fc05ace4decf4d9f011db328b5786
+    path: Assets/Scenes/TiltleScene.unity
+    guid: 694464251f87fc14d911f2b797d77faf
   - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 37a508bdd63db8c47974cc7e20d57954
   - enabled: 1
-    path: Assets/Scenes/TiltleScene.unity
-    guid: 694464251f87fc14d911f2b797d77faf
+    path: Assets/Scenes/Ending-T.unity
+    guid: 7b4fc05ace4decf4d9f011db328b5786
   m_configObjects: {}
