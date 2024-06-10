@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Playables;
 
 //エンディングシーンのコントロールを行う
 /*
@@ -16,8 +17,9 @@ using UnityEngine.EventSystems;
 
 public class EndingSceneController : MonoBehaviour
 {
-    //プレイヤー
-    public GameObject player;
+    //タイムライン
+    public PlayableDirector TLDirector;
+    public GameObject endingStartTimeLine;
 
     //エンドロール操作
     public GameObject endRollDirector;
@@ -30,14 +32,26 @@ public class EndingSceneController : MonoBehaviour
     //エンドロールUI
     public GameObject endRollPanel;
 
+    //イベントムービー
+    public GameObject endingMovie;
+
+    //BGM
+    public AudioSource BGM;
+
     private void Awake()
     {
+        //タイムライン活性化
+        endingStartTimeLine.SetActive(true);
+
         //endRollDirecter非活性
         endRollDirector.SetActive(false);
 
         //UI非表示
         Panel_NotActive();
         endRollPanel.SetActive(false);
+
+        //ムービー非表示
+        endingMovie.SetActive(false);
 
     }
 
@@ -48,7 +62,7 @@ public class EndingSceneController : MonoBehaviour
         Cursor.visible = false;
 
         //プレイヤー(0,1,6)、trigger(0,1,21)の位置まで移動する、タイムラインによる制御
-        // player.transform.DOMove(new Vector3(0f, 1f, 21f), 7f);
+        TLDirector.Play();
 
     }
 
@@ -74,13 +88,20 @@ public class EndingSceneController : MonoBehaviour
         Cursor.visible = false;
         Debug.Log("振り返らない");
 
-        //パネル非表示
+        //選択肢パネル非表示
         Panel_NotActive();
 
-        //この後、参拝する
+        //スタートタイムライン非活性
+        endingStartTimeLine.SetActive(false);
+
+        //BGM停止
+        BGM.Stop();
+
+        //ムービー再生
+        endingMovie.SetActive(true);
 
         //参拝したらエンドロールへ
-
+        StartCoroutine(E_NotLookBackCoroutine());
     }
 
     void Panel_NotActive()
@@ -92,10 +113,13 @@ public class EndingSceneController : MonoBehaviour
     IEnumerator E_LookBackCoroutine()
     {
         //プレイヤー(0,0,0)、1秒後に背後を左回りで振り返る
-        player.transform.DORotate(new Vector3(0, -180, 0), 6f).SetEase(Ease.InOutSine).SetDelay(2f);
+        // player.transform.DORotate(new Vector3(0, -180, 0), 6f).SetEase(Ease.InOutSine).SetDelay(2f);
 
-        //DOTween含め10秒待ってからエンドロールへ
+        //振り返り動作含め10秒待ってからエンドロールへ
         yield return new WaitForSeconds(10F);
+
+        //BGM停止
+        BGM.Stop();
 
         //エンドロール再生
         endRollPanel.SetActive(true);
@@ -108,11 +132,15 @@ public class EndingSceneController : MonoBehaviour
     //振り返らない
     IEnumerator E_NotLookBackCoroutine()
     {
-        //参拝する
+        //videoControllerのisPlayがtrueなら＝動画再生が終わったら
+        yield return new WaitUntil(() => VideoController.isPlay == true);
 
-        //エンドロールへ
+        //ムービー後、エンドロールへ
+        endRollPanel.SetActive(true);
+        endRollDirector.SetActive(true);
 
-        yield return null;
+        //コルーチン停止
+        yield break;
     }
 
 }

@@ -160,8 +160,8 @@ public class EndRollController : MonoBehaviour
 
         //テキストの位置、下辺中央
         float bottom = canvasHeight / 2;
-        Debug.Log("画面縦サイズ" + canvasHeight);
-        Debug.Log("画面の半分" + bottom);
+        // Debug.Log("画面縦サイズ" + canvasHeight);
+        // Debug.Log("画面の半分" + bottom);
 
 
         endRollText.rectTransform.localPosition = new Vector3(0, -bottom, 0);
