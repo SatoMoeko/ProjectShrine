@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17508811, g: 0.083764285, b: 0.08319887, a: 1}
+  m_IndirectSpecularColor: {r: 0.17508823, g: 0.08376233, b: 0.08320326, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -169,6 +169,11 @@ Transform:
   - {fileID: 585433759}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &262486448 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8397022371453114954, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
+  m_PrefabInstance: {fileID: 593364924}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &351116201
 Mesh:
   m_ObjectHideFlags: 0
@@ -2276,10 +2281,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 1641554036}
   stageChips:
-  - {fileID: 8397022371453114954, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
+  - {fileID: 8397022371453114954, guid: 4dbbae58bdf5fef43a6c196bda2bf948, type: 3}
+  - {fileID: 8397022371453114954, guid: 1d898868cb755b04090497f5a1bccaca, type: 3}
+  - {fileID: 8397022371453114954, guid: ba3092416cb43bd4b9e0a0704830e54f, type: 3}
+  - {fileID: 8397022371453114954, guid: fdb21b1dd666cc648bdc2957b64acf38, type: 3}
+  - {fileID: 8397022371453114954, guid: 33bea9b3e6a45f94e915ac5f8792f498, type: 3}
   startChipIndex: 1
-  preInstantiate: 3
-  generatedStageList: []
+  preInstantiate: 1
+  generatedStageList:
+  - {fileID: 2132345586}
+  - {fileID: 262486448}
 --- !u!4 &2117642244
 Transform:
   m_ObjectHideFlags: 0
@@ -2295,6 +2306,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2132345586 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8397022371453114954, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
+  m_PrefabInstance: {fileID: 816662456}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
