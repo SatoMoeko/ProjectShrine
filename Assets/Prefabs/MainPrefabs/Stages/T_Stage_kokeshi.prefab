@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 8331596423711994968}
   m_Layer: 0
   m_Name: T_Stage_kokeshi
-  m_TagString: Untagged
+  m_TagString: OtherStage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
