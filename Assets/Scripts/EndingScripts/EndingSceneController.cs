@@ -20,10 +20,10 @@ public class EndingSceneController : MonoBehaviour
     public GameObject player;
 
     //エンドロール操作
-    public GameObject endRollDirecter;
+    public GameObject endRollDirector;
 
     //エンディングイベント操作
-    public GameObject endingEventDirecter;
+    public GameObject endingEventDirector;
 
     //イベントUI
     public GameObject selectEndingPanel;
@@ -33,7 +33,7 @@ public class EndingSceneController : MonoBehaviour
     private void Awake()
     {
         //endRollDirecter非活性
-        endRollDirecter.SetActive(false);
+        endRollDirector.SetActive(false);
 
         //UI非表示
         Panel_NotActive();
@@ -99,7 +99,7 @@ public class EndingSceneController : MonoBehaviour
 
         //エンドロール再生
         endRollPanel.SetActive(true);
-        endRollDirecter.SetActive(true);
+        endRollDirector.SetActive(true);
 
         //コルーチン停止
         yield break;

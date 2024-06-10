@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1750881, g: 0.083764285, b: 0.08319887, a: 1}
+  m_IndirectSpecularColor: {r: 0.17508811, g: 0.083764285, b: 0.08319887, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2276,7 +2276,7 @@ PrefabInstance:
       objectReference: {fileID: 1473144742}
     - target: {fileID: 9069531782151333325, guid: ba1c3d9d4c49f2f4a86ad49c7314027f, type: 3}
       propertyPath: m_Name
-      value: EndingEventDirecter
+      value: EndingEventDirector
       objectReference: {fileID: 0}
     - target: {fileID: 9069531782151333325, guid: ba1c3d9d4c49f2f4a86ad49c7314027f, type: 3}
       propertyPath: m_IsActive
@@ -2629,7 +2629,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3287038171301953966, guid: df64abfa53e9a034183fa5a15bb07086, type: 3}
       propertyPath: m_Name
-      value: EndRollDirecter
+      value: EndRollDirector
       objectReference: {fileID: 0}
     - target: {fileID: 3287038171301953966, guid: df64abfa53e9a034183fa5a15bb07086, type: 3}
       propertyPath: m_IsActive
@@ -3022,7 +3022,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3633541516742112029, guid: ddc6857217e84e945b2e80a03b916625, type: 3}
       propertyPath: m_Name
-      value: EndignSceneDirecter
+      value: EndignSceneDirector
       objectReference: {fileID: 0}
     - target: {fileID: 3633541516742112029, guid: ddc6857217e84e945b2e80a03b916625, type: 3}
       propertyPath: m_IsActive
