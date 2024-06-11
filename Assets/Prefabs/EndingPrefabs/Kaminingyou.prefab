@@ -887,8 +887,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2840513750596818487}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7904555, y: -0.00000007301805, z: -0.00000009422965, w: 0.61251944}
-  m_LocalPosition: {x: 6.390994e-12, y: 0.00032527893, z: 0.0060960893}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0.0060960893}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -896,7 +896,7 @@ Transform:
   - {fileID: 4418891079442411128}
   - {fileID: 6735235416266817851}
   m_Father: {fileID: 6565518679352380123}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &3026536233739990899
 GameObject:
   m_ObjectHideFlags: 0
@@ -2458,6 +2458,7 @@ GameObject:
   - component: {fileID: 4764761598759877974}
   - component: {fileID: 4309838443311266310}
   - component: {fileID: 2767529123828278325}
+  - component: {fileID: 8444754374273286470}
   m_Layer: 0
   m_Name: Kaminingyou
   m_TagString: Untagged
@@ -2474,7 +2475,7 @@ Transform:
   m_GameObject: {fileID: 7162903680374823420}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: -1.326, y: 58.419, z: 33.64}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 30}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -2524,6 +2525,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.006289608, y: 0.0002304076, z: 0.008311207}
   m_Center: {x: -0.00008783365, y: -0.00004275207, z: 0.010148641}
+--- !u!114 &8444754374273286470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7162903680374823420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c50873b17564cd74193375ad4a502865, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  peelOffText: {fileID: 0}
+  radius: 0.5
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &7330761101340361630
 GameObject:
   m_ObjectHideFlags: 0
