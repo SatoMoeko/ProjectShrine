@@ -14,12 +14,29 @@ public class EndingEventTrigger : MonoBehaviour
     //プレイヤー
     public Transform player;
 
+    //タイムライン
+    public PlayableDirector endingTimeline;
+
     void OnTriggerEnter(Collider other)
     {
+        // Cursor.lockState = CursorLockMode.None;
+        // Cursor.visible = true;
+
+        // selectEndingCanvas.SetActive(true);
+        Debug.Log("player接触");
+    }
+
+    //シグナルで呼び出す
+    //分岐パネルを表示し、timelineを一時停止する
+    public void SelectEvent()
+    {
+        //タイムライン一時停止
+        endingTimeline.Pause();
+
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
         selectEndingCanvas.SetActive(true);
-        Debug.Log("player接触");
+        // Debug.Log("player接触");
     }
 }

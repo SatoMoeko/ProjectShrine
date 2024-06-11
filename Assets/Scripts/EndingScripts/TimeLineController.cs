@@ -7,10 +7,12 @@ public class TimeLineController : MonoBehaviour
 {
     //タイムラインの取得
     public PlayableDirector director;
+    public static bool isPlay;
 
     //スクリプトが有効になった時、イベントハンドラ設定
     private void OnEnable()
     {
+        isPlay = false;
         director.stopped += OnPlayableDirectoreStopped;
     }
 
@@ -20,7 +22,11 @@ public class TimeLineController : MonoBehaviour
         if (director == aDirector)
         {
             //停止時の処理
+            isPlay = true;
+            Debug.Log("ご対面完了");
 
+            //自gameobjectの非活性化
+            gameObject.SetActive(false);
         }
     }
 
@@ -28,17 +34,18 @@ public class TimeLineController : MonoBehaviour
     private void OnDisable()
     {
         director.stopped -= OnPlayableDirectoreStopped;
+
     }
 
-    //一時停止
-    public void TimeLinePause()
-    {
-        director.Pause();
-    }
+    // //一時停止
+    // public void TimeLinePause()
+    // {
+    //     director.Pause();
+    // }
 
-    //再生
-    public void TimeLineRestart()
-    {
-        director.Resume();
-    }
+    // //再生
+    // public void TimeLineRestart()
+    // {
+    //     director.Resume();
+    // }
 }

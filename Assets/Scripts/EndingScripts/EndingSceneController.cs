@@ -19,7 +19,7 @@ public class EndingSceneController : MonoBehaviour
 {
     //タイムライン
     public PlayableDirector TLDirector;
-    public GameObject endingStartTimeLine;
+    public GameObject endingTimeLine;
 
     //エンドロール操作
     public GameObject endRollDirector;
@@ -41,7 +41,7 @@ public class EndingSceneController : MonoBehaviour
     private void Awake()
     {
         //タイムライン活性化
-        endingStartTimeLine.SetActive(true);
+        endingTimeLine.SetActive(true);
 
         //endRollDirecter非活性
         endRollDirector.SetActive(false);
@@ -74,14 +74,14 @@ public class EndingSceneController : MonoBehaviour
 
         Debug.Log("振り返る");
 
-        //パネル非表示
+        //選択肢パネル非表示
         Panel_NotActive();
 
+        //コルーチン
         StartCoroutine(E_LookBackCoroutine());
-
-        //ご対面したらエンドロールへ
     }
 
+    //振り返らない選択
     public void NotlookBackTorigger()
     {
         //マウスポインタ不可視化
@@ -92,7 +92,7 @@ public class EndingSceneController : MonoBehaviour
         Panel_NotActive();
 
         //スタートタイムライン非活性
-        endingStartTimeLine.SetActive(false);
+        endingTimeLine.SetActive(false);
 
         //BGM停止
         BGM.Stop();
@@ -113,10 +113,12 @@ public class EndingSceneController : MonoBehaviour
     IEnumerator E_LookBackCoroutine()
     {
         //プレイヤー(0,0,0)、1秒後に背後を左回りで振り返る
-        // player.transform.DORotate(new Vector3(0, -180, 0), 6f).SetEase(Ease.InOutSine).SetDelay(2f);
+        //タイムラインを再生
+        TLDirector.time = 8;
+        TLDirector.Resume();
 
-        //振り返り動作含め10秒待ってからエンドロールへ
-        yield return new WaitForSeconds(10F);
+        //タイムラインの再生が終わったら
+        yield return new WaitUntil(() => TimeLineController.isPlay == true);
 
         //BGM停止
         BGM.Stop();
@@ -132,7 +134,7 @@ public class EndingSceneController : MonoBehaviour
     //振り返らない
     IEnumerator E_NotLookBackCoroutine()
     {
-        //videoControllerのisPlayがtrueなら＝動画再生が終わったら
+        //videoControllerのisPlayがtrueになるまで待機
         yield return new WaitUntil(() => VideoController.isPlay == true);
 
         //ムービー後、エンドロールへ
