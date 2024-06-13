@@ -11,15 +11,19 @@ using UnityEngine.Playables;
 ・プレイヤー：自動的にtriggerまで移動
 ・triggerに接触したらプレイヤー停止、目の前に二択が出現
     ∟　1：振り返る→左回りでゆっくり視点移動、鳥居の方を向く→出会った異変たちとご対面
-    ∟　2：振り返らない→お参りするムービー
+    ∟　2：振り返らない→お参りする
 ・エンドロール再生
 */
 
 public class EndingSceneController : MonoBehaviour
 {
-    //タイムライン
+    //開始とエンディング１のタイムライン
     public PlayableDirector TLDirector;
     public GameObject endingTimeLine;
+
+    //エンディング２のタイムライン
+    // public PlayableDirector ending2;
+    // public GameObject ending2TimeLine;
 
     //エンドロール操作
     public GameObject endRollDirector;
@@ -42,6 +46,9 @@ public class EndingSceneController : MonoBehaviour
     {
         //タイムライン活性化
         endingTimeLine.SetActive(true);
+
+        //エンディング２非活性
+        //ending2TimeLine.SetActive(false);
 
         //endRollDirecter非活性
         endRollDirector.SetActive(false);
@@ -100,6 +107,9 @@ public class EndingSceneController : MonoBehaviour
         //ムービー再生
         endingMovie.SetActive(true);
 
+        //エンディング２タイムライン活性
+        //ending2TimeLine.SetActive(true);
+
         //参拝したらエンドロールへ
         StartCoroutine(E_NotLookBackCoroutine());
     }
@@ -112,8 +122,8 @@ public class EndingSceneController : MonoBehaviour
     //振り返る
     IEnumerator E_LookBackCoroutine()
     {
-        //プレイヤー(0,0,0)、1秒後に背後を左回りで振り返る
-        //タイムラインを再生
+        //背後を左回りで振り返る
+        //タイムラインを8秒の部分から再生
         TLDirector.time = 8;
         TLDirector.Resume();
 
@@ -136,6 +146,7 @@ public class EndingSceneController : MonoBehaviour
     {
         //videoControllerのisPlayがtrueになるまで待機
         yield return new WaitUntil(() => VideoController.isPlay == true);
+        //yield return new WaitUntil(()=> == true);
 
         //ムービー後、エンドロールへ
         endRollPanel.SetActive(true);

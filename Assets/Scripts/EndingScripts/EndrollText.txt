@@ -16,7 +16,7 @@ sato
 tsuru
 
 
-<size=70><color=red>design</color></size>
+<size=70><color=red>Design</color></size>
 
 <size=50>-Title-</size>
 mita
