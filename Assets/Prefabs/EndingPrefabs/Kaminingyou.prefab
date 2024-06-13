@@ -2537,11 +2537,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c50873b17564cd74193375ad4a502865, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  peelOffText: {fileID: 0}
   radius: 1
   targetLayer:
     serializedVersion: 2
     m_Bits: 256
+  result:
+  - {fileID: 0}
 --- !u!1 &7330761101340361630
 GameObject:
   m_ObjectHideFlags: 0

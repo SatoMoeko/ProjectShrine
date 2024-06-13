@@ -6,6 +6,7 @@ using UnityEngine.Rendering;
 
 /*
 看板のあたりでカウントダウン開始
+挑戦中のBGM：未確定
 表示情報：残り枚数、制限時間、ボタン
 現状、クリアできなくても何も起こらない
 */
@@ -33,14 +34,17 @@ public class KaminingyouDirector : MonoBehaviour
     public TextMeshProUGUI timetext;
     public TextMeshProUGUI peelOff;
 
-    // //SE
-    // public AudioClip good;
-    // public AudioClip bad;
+    //SE
+    public AudioClip good;
+    public AudioClip bad;
+    AudioSource audioSource;
 
     private void Start()
     {
         kaminingyouUI.SetActive(false);
         count = kamininngyous.Length;
+
+        audioSource = GetComponent<AudioSource>();
     }
     private void Update()
     {
@@ -104,22 +108,38 @@ public class KaminingyouDirector : MonoBehaviour
             Debug.Log("成功");
             peelOff.text = "congratulation!";
 
-            //成功SE流してからUI非活性：コルーチン化する？
-            // kaminingyouUI.SetActive(false);
+            //成功SE流してからUI非活性
+            audioSource.PlayOneShot(good);
+
+            StartCoroutine(ResultCoroutine());
         }
         //challenge成功しておらずタイムアップした時
         else if (countdown <= 0)
         {
             isTry = true;
 
-            timetext.text = "TimeUp!";
+            peelOff.text = "TimeUp!";
 
             Debug.Log("失敗");
 
             //失敗SE流してからUI非活性
-            // kaminingyouUI.SetActive(false);
+            audioSource.PlayOneShot(bad);
+
+            StartCoroutine(ResultCoroutine());
         }
 
+    }
+
+    IEnumerator ResultCoroutine()
+    {
+        //三秒待つ
+        yield return new WaitForSeconds(3f);
+
+        //UI非活性
+        kaminingyouUI.SetActive(false);
+
+        //コルーチン停止
+        yield break;
     }
 
 }
