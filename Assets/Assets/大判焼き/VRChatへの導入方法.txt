@@ -1,0 +1,26 @@
+VRChatへの導入方法
+
+①Unity 2019.4.31f1でプロジェクトを作成し、VRCHAT SDK3-Avatarsをインポートする。
+　（VRCHAT SDK3-Avatarsは公式サイトからダウンロードしてください）
+
+②ダウンロードしたフォルダ内の【大判焼き_v1.0.0.unitypackagee】をインポートします
+
+③次にプロジェクトの ARE_v1.0.0 ＞　Prefabの中の【ARE_BODY】を
+　Hierarchyにドラッグ&ドロップ
+
+④windowのVRChat SDK　＞　Show Build Controll Panelをクリック
+
+⑤自信のVRCHATにログインした後、Builderタブ内のアップロードするモデルを選択し、Build & Publish and Windowsをクリック
+
+⑥New Avatar の画面で以下設定を行います。
+
+　1.[Avatar Name]にそのアバターの名称を入力します。(ご自由にどうぞ)
+　2.[Description]は説明文です。空欄でも構いません。(ご自由にどうぞ)
+　3.[Content Warnings]はアバターにセクシャル表現や流血表現などがある場合に適切なチェックを行います。
+　4.[Sharing]は共有設定です。[Private]を選択してください。
+    （[Public]を選択すると他の方が自由に利用可能な状態となるため）
+　5.[The above ～]の注意文を確認し、チェックを入れます。
+
+　設定が完了したら[Upload]ボタンをクリックします。
+
+⑦VRCHATを起動しアバターを使用してください。

@@ -18,12 +18,14 @@ using UnityEngine.Playables;
 public class EndingSceneController : MonoBehaviour
 {
     //開始とエンディング１のタイムライン
-    public PlayableDirector TLDirector;
+    public PlayableDirector endingDirector;
     public GameObject endingTimeLine;
+    TimeLineController ending;
 
     //エンディング２のタイムライン
-    // public PlayableDirector ending2;
-    // public GameObject ending2TimeLine;
+    public PlayableDirector ending2Director;
+    public GameObject ending2TimeLine;
+    TimeLineController ending2;
 
     //エンドロール操作
     public GameObject endRollDirector;
@@ -44,11 +46,17 @@ public class EndingSceneController : MonoBehaviour
 
     private void Awake()
     {
+        // //コンポーネント取得
+        // ending = endingDirector.GetComponent<TimeLineController>();
+        // ending2 = ending2Director.GetComponent<TimeLineController>();
+
+
         //タイムライン活性化
         endingTimeLine.SetActive(true);
 
         //エンディング２非活性
-        //ending2TimeLine.SetActive(false);
+        // ending2TimeLine.SetActive(false);
+        // ending2Director.enabled = false;
 
         //endRollDirecter非活性
         endRollDirector.SetActive(false);
@@ -69,7 +77,7 @@ public class EndingSceneController : MonoBehaviour
         Cursor.visible = false;
 
         //プレイヤー(0,1,6)、trigger(0,1,21)の位置まで移動する、タイムラインによる制御
-        TLDirector.Play();
+        endingDirector.Play();
 
     }
 
@@ -108,7 +116,7 @@ public class EndingSceneController : MonoBehaviour
         endingMovie.SetActive(true);
 
         //エンディング２タイムライン活性
-        //ending2TimeLine.SetActive(true);
+        // ending2TimeLine.SetActive(true);
 
         //参拝したらエンドロールへ
         StartCoroutine(E_NotLookBackCoroutine());
@@ -124,11 +132,11 @@ public class EndingSceneController : MonoBehaviour
     {
         //背後を左回りで振り返る
         //タイムラインを8秒の部分から再生
-        TLDirector.time = 8;
-        TLDirector.Resume();
+        endingDirector.time = 8;
+        endingDirector.Resume();
 
         //タイムラインの再生が終わったら
-        yield return new WaitUntil(() => TimeLineController.isPlay == true);
+        yield return new WaitUntil(() => !endingTimeLine.activeInHierarchy == true);
 
         //BGM停止
         BGM.Stop();
@@ -146,7 +154,7 @@ public class EndingSceneController : MonoBehaviour
     {
         //videoControllerのisPlayがtrueになるまで待機
         yield return new WaitUntil(() => VideoController.isPlay == true);
-        //yield return new WaitUntil(()=> == true);
+        // yield return new WaitUntil(() => !ending2TimeLine.activeInHierarchy == true);
 
         //ムービー後、エンドロールへ
         endRollPanel.SetActive(true);
