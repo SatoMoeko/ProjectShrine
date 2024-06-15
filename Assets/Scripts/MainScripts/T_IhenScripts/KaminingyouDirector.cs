@@ -105,8 +105,8 @@ public class KaminingyouDirector : MonoBehaviour
         //challenge成功したら
         if (isChallenge)
         {
-            Debug.Log("成功");
-            peelOff.text = "congratulation!";
+            // Debug.Log("成功");
+            peelOff.text = "挑戦成功";
 
             //成功SE流してからUI非活性
             audioSource.PlayOneShot(good);
@@ -118,9 +118,9 @@ public class KaminingyouDirector : MonoBehaviour
         {
             isTry = true;
 
-            peelOff.text = "TimeUp!";
+            peelOff.text = "挑戦失敗";
 
-            Debug.Log("失敗");
+            // Debug.Log("失敗");
 
             //失敗SE流してからUI非活性
             audioSource.PlayOneShot(bad);
