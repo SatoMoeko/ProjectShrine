@@ -44,6 +44,8 @@ public class EndingSceneController : MonoBehaviour
     //BGM
     public AudioSource BGM;
 
+    public GameObject ihen;
+
     private void Awake()
     {
         // //コンポーネント取得
@@ -68,6 +70,9 @@ public class EndingSceneController : MonoBehaviour
         //ムービー非表示
         endingMovie.SetActive(false);
 
+        //異変非表示
+        ihen.SetActive(false);
+
     }
 
     private void Start()
@@ -91,6 +96,9 @@ public class EndingSceneController : MonoBehaviour
 
         //選択肢パネル非表示
         Panel_NotActive();
+
+        //異変表示
+        // ihen.SetActive(true);
 
         //コルーチン
         StartCoroutine(E_LookBackCoroutine());
@@ -140,6 +148,8 @@ public class EndingSceneController : MonoBehaviour
 
         //BGM停止
         BGM.Stop();
+        //異変非表示
+        // ihen.SetActive(false);
 
         //エンドロール再生
         endRollPanel.SetActive(true);

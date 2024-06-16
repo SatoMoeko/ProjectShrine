@@ -44,12 +44,12 @@ public class Kaminingyou : MonoBehaviour, IInteractable
 
     }
 
-    //円の可視化
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, radius);
-    }
+    // //円の可視化
+    // private void OnDrawGizmos()
+    // {
+    //     Gizmos.color = Color.red;
+    //     Gizmos.DrawWireSphere(transform.position, radius);
+    // }
 
     public void Interact()
     {
