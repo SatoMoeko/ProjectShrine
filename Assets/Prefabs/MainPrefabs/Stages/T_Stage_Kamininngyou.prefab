@@ -439,8 +439,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "F:\u7D19\u4EBA\u5F62\u3092\u5265\u304C\u3059"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3a53e0035cf0f3d4d94a5825c7b41f5e, type: 2}
-  m_sharedMaterial: {fileID: -9188221931825200324, guid: 3a53e0035cf0f3d4d94a5825c7b41f5e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8d4a96461cd003c4990892b835e72b4c, type: 2}
+  m_sharedMaterial: {fileID: -5733701227395202019, guid: 8d4a96461cd003c4990892b835e72b4c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
