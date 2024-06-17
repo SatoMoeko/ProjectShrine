@@ -13,7 +13,6 @@ public class Main_PlayerController : MonoBehaviour
     public Transform orientation;
 
     public StageGenerator stageGenerator;
-
     public Main_GameController gameController;
 
     public float moveSpeed;
@@ -22,6 +21,16 @@ public class Main_PlayerController : MonoBehaviour
     public float playerheight;
     public LayerMask Ground;
     bool grounded;
+
+    int point;
+
+
+
+    public int Point()
+    {
+        return point;
+    }
+
 
 
     // Start is called before the first frame update
@@ -49,6 +58,8 @@ public class Main_PlayerController : MonoBehaviour
 
         ProcessInput();
         SpeedControl();
+
+
 
     }
 
@@ -88,14 +99,36 @@ public class Main_PlayerController : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("DefaultStage"))
+        if (other.CompareTag("DefaultSushi"))
         {
-            gameController.DefaultStagePoint();
+            GameObject stage = other.gameObject.transform.parent.gameObject;
+            GameObject sushi = stage.transform.Find("Inari").gameObject;
+            Debug.Log(sushi.activeSelf);
+
+            if (sushi.activeSelf == true)
+            {
+                point = 0;
+            }
+            if (sushi.activeSelf == false)
+            {
+                point += 1;
+            }
         }
-        if (other.CompareTag("OtherStage"))
+        if (other.CompareTag("OtherSushi"))
         {
-            gameController.OtherStagePoint();
+            GameObject stage = other.gameObject.transform.parent.gameObject;
+            GameObject sushi = stage.transform.Find("Inari").gameObject;
+
+            if (sushi.activeSelf == true)
+            {
+                point += 1;
+            }
+            if (sushi.activeSelf == false)
+            {
+                point = 0;
+            }
         }
+
     }
 
 }

@@ -226,6 +226,10 @@ PrefabInstance:
       propertyPath: m_VersionIndex
       value: 19
       objectReference: {fileID: 0}
+    - target: {fileID: 6469289726977545854, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
+      propertyPath: m_TagString
+      value: OtherSushi
+      objectReference: {fileID: 0}
     - target: {fileID: 6547521750766764129, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -273,6 +277,10 @@ PrefabInstance:
     - target: {fileID: 8397022371453114954, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
       propertyPath: m_Name
       value: DefaultStage
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005223292837028113, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

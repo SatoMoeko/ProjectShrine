@@ -4,10 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Sushi
   - DefaultStage
   - OtherStage
   - Kamininngyou
+  - Ghost
+  - DefaultSushi
+  - OtherSushi
   layers:
   - Default
   - TransparentFX
