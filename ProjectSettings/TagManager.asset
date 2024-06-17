@@ -3,18 +3,22 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Sushi
+  - DefaultStage
+  - OtherStage
+  - Kamininngyou
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - BackGround
+  - Ground
+  - Player
+  - Komachi
   - 
   - 
   - 
