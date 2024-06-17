@@ -92,7 +92,7 @@ public class EndRollController : MonoBehaviour
         //タイトルのスクロール
         if (!isOutTitle)
         {
-            //isOutTitle:falseなら5秒停止後にスクロール
+            //isOutTitle:falseなら3秒停止後にスクロール
             endRollTitleCoroutine = StartCoroutine(StartEndRollTitle());
         }
 
@@ -160,8 +160,8 @@ public class EndRollController : MonoBehaviour
 
         //テキストの位置、下辺中央
         float bottom = canvasHeight / 2;
-        Debug.Log("画面縦サイズ" + canvasHeight);
-        Debug.Log("画面の半分" + bottom);
+        // Debug.Log("画面縦サイズ" + canvasHeight);
+        // Debug.Log("画面の半分" + bottom);
 
 
         endRollText.rectTransform.localPosition = new Vector3(0, -bottom, 0);
@@ -172,7 +172,7 @@ public class EndRollController : MonoBehaviour
         // Debug.Break();
     }
 
-    //タイトルを五秒待った後にスクロールさせ、画面外に出たらたたむ
+    //タイトルを3秒待った後にスクロールさせ、画面外に出たらたたむ
     IEnumerator StartEndRollTitle()
     {
         //３秒まつ

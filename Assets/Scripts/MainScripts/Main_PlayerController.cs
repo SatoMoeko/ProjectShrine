@@ -4,19 +4,17 @@ using UnityEngine;
 
 public class Main_PlayerController : MonoBehaviour
 {
-    const int DefaultPoint = 0;
-
     Vector3 moveDirection;
     Rigidbody rb;
 
-    int point = DefaultPoint;
     float HorizontalInput;
     float VerticalInput;
 
     public Transform orientation;
 
     public StageGenerator stageGenerator;
-    public GameObject sushi;
+
+    public Main_GameController gameController;
 
     public float moveSpeed;
     public float groundDrag;
@@ -25,10 +23,6 @@ public class Main_PlayerController : MonoBehaviour
     public LayerMask Ground;
     bool grounded;
 
-    public int Point()
-    {
-        return point;
-    }
 
     // Start is called before the first frame update
     void Start()
@@ -56,32 +50,6 @@ public class Main_PlayerController : MonoBehaviour
         ProcessInput();
         SpeedControl();
 
-
-
-        //ポイント処理
-        //いまプレイヤーがいるステージがdefaultのとき
-        // if (??????????)
-        //{
-        //    if (sushi.activeInHierarchy)
-        //    {
-        //        point = 0;
-        //    }
-        //   else
-        //   {
-        //        point += 1;
-        //    }
-        //   }
-        //   else //ステージがそれ以外のとき
-        //   {
-        //      if (sushi.activeInHierarchy)
-        //      {
-        //          point += 1;
-        //      }
-        //      else
-        //      {
-        //         point += 0;
-        //     }
-        //  }
     }
 
     void FixedUpdate()
@@ -114,6 +82,19 @@ public class Main_PlayerController : MonoBehaviour
         {
             Vector3 limitedVel = flatVel.normalized * moveSpeed;
             rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
+        }
+    }
+
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("DefaultStage"))
+        {
+            gameController.DefaultStagePoint();
+        }
+        if (other.CompareTag("OtherStage"))
+        {
+            gameController.OtherStagePoint();
         }
     }
 

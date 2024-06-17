@@ -7,7 +7,7 @@ TagManager:
   - Sushi
   - DefaultStage
   - OtherStage
-  - Ghost
+  - Kamininngyou
   layers:
   - Default
   - TransparentFX
@@ -17,8 +17,8 @@ TagManager:
   - UI
   - BackGround
   - Ground
-  - PostProcessing
-  - 
+  - Player
+  - Komachi
   - 
   - 
   - 

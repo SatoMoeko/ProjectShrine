@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17508823, g: 0.08376233, b: 0.08320326, a: 1}
+  m_IndirectSpecularColor: {r: 0.17508811, g: 0.083764285, b: 0.08319887, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1472,7 +1472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad32da580b620424cb029aa2857c3ff5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 1415690745}
+  sushi: {fileID: 532818448563601105, guid: 5c0437a3ee98bbc4091ce47587e1bc3d, type: 3}
 --- !u!4 &1055887654
 Transform:
   m_ObjectHideFlags: 0
@@ -1763,8 +1763,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orientation: {fileID: 902607214}
   stageGenerator: {fileID: 2117642243}
-  sushi: {fileID: 532818448563601105, guid: 5c0437a3ee98bbc4091ce47587e1bc3d, type: 3}
-  moveSpeed: 2
+  gameController: {fileID: 1055887653}
+  moveSpeed: 5
   groundDrag: 3
   playerheight: 1.6
   Ground:
@@ -1782,6 +1782,7 @@ GameObject:
   - component: {fileID: 1641554035}
   - component: {fileID: 1641554034}
   - component: {fileID: 1641554033}
+  - component: {fileID: 1641554037}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1877,6 +1878,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1415690742}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &1641554037
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641554031}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1.9999999
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!43 &1727035791
 Mesh:
   m_ObjectHideFlags: 0
