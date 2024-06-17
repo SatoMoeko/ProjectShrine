@@ -8,6 +8,8 @@ TagManager:
   - DefaultStage
   - OtherStage
   - Kamininngyou
+  - Ghost
+  - SoundManager
   layers:
   - Default
   - TransparentFX
