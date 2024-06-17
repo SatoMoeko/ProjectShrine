@@ -98,7 +98,7 @@ public class EndingSceneController : MonoBehaviour
         Panel_NotActive();
 
         //異変表示
-        // ihen.SetActive(true);
+        ihen.SetActive(true);
 
         //コルーチン
         StartCoroutine(E_LookBackCoroutine());
@@ -149,7 +149,7 @@ public class EndingSceneController : MonoBehaviour
         //BGM停止
         BGM.Stop();
         //異変非表示
-        // ihen.SetActive(false);
+        ihen.SetActive(false);
 
         //エンドロール再生
         endRollPanel.SetActive(true);
