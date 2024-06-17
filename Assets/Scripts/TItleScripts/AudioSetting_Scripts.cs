@@ -47,13 +47,15 @@ public class AudioSetting_Scripts : MonoBehaviour
         BGMvolumeSlider.onValueChanged.AddListener(ChangeVolumeBGM);
         SEvolumeSlider.onValueChanged.AddListener(ChangeVolumeSE);
 
-        //エスケープキーが押されたときの処理
-        if (Input.GetKeyDown(KeyCode.Tab) && !Opened_Audio_Setting)
+        //キーが押されたときの処理
+        if (Input.GetKeyDown(KeyCode.T) && !Opened_Audio_Setting)
         {
+            Debug.Log("OPEN");
             Open_Audio_Setting();
         }
-        else if (Input.GetKeyDown(KeyCode.Tab) && Opened_Audio_Setting)
+        else if (Input.GetKeyDown(KeyCode.T) && Opened_Audio_Setting)
         {
+            Debug.Log("CLOSE");
             Close_Audio_Setting();
         }
     }
@@ -87,7 +89,7 @@ public class AudioSetting_Scripts : MonoBehaviour
     {
         if (!Opened_Audio_Setting)
         {
-            gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - 8f, gameObject.transform.position.z);
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - 250f, gameObject.transform.position.z);
             Opened_Audio_Setting = true;
             PauseGame();
         }
@@ -99,7 +101,7 @@ public class AudioSetting_Scripts : MonoBehaviour
     {
         if (Opened_Audio_Setting)
         {
-            gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 8f, gameObject.transform.position.z);
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 250f, gameObject.transform.position.z);
             Opened_Audio_Setting = false;
             ResumeGame();
         }
