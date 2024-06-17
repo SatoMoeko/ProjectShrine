@@ -57,7 +57,7 @@ public class EndingSceneController : MonoBehaviour
         endingTimeLine.SetActive(true);
 
         //エンディング２非活性
-        // ending2TimeLine.SetActive(false);
+        ending2TimeLine.SetActive(false);
         // ending2Director.enabled = false;
 
         //endRollDirecter非活性
@@ -121,10 +121,10 @@ public class EndingSceneController : MonoBehaviour
         BGM.Stop();
 
         //ムービー再生
-        endingMovie.SetActive(true);
+        // endingMovie.SetActive(true);
 
         //エンディング２タイムライン活性
-        // ending2TimeLine.SetActive(true);
+        ending2TimeLine.SetActive(true);
 
         //参拝したらエンドロールへ
         StartCoroutine(E_NotLookBackCoroutine());
@@ -163,8 +163,8 @@ public class EndingSceneController : MonoBehaviour
     IEnumerator E_NotLookBackCoroutine()
     {
         //videoControllerのisPlayがtrueになるまで待機
-        yield return new WaitUntil(() => VideoController.isPlay == true);
-        // yield return new WaitUntil(() => !ending2TimeLine.activeInHierarchy == true);
+        // yield return new WaitUntil(() => VideoController.isPlay == true);
+        yield return new WaitUntil(() => !ending2TimeLine.activeInHierarchy == true);
 
         //ムービー後、エンドロールへ
         endRollPanel.SetActive(true);

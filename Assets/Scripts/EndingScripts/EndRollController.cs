@@ -92,7 +92,7 @@ public class EndRollController : MonoBehaviour
         //タイトルのスクロール
         if (!isOutTitle)
         {
-            //isOutTitle:falseなら5秒停止後にスクロール
+            //isOutTitle:falseなら3秒停止後にスクロール
             endRollTitleCoroutine = StartCoroutine(StartEndRollTitle());
         }
 
@@ -172,7 +172,7 @@ public class EndRollController : MonoBehaviour
         // Debug.Break();
     }
 
-    //タイトルを五秒待った後にスクロールさせ、画面外に出たらたたむ
+    //タイトルを3秒待った後にスクロールさせ、画面外に出たらたたむ
     IEnumerator StartEndRollTitle()
     {
         //３秒まつ

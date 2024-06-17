@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1750881, g: 0.083764285, b: 0.08319887, a: 1}
+  m_IndirectSpecularColor: {r: 0.17508811, g: 0.083764285, b: 0.08319887, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1231,7 +1231,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &494360823
 Transform:
   m_ObjectHideFlags: 0
@@ -1692,6 +1692,7 @@ PlayableDirector:
     - d2f95d6524d33634e8d464065ba35d97: {fileID: 254235937}
     - 90c74973be018ab408e249d7c24cdb4f: {fileID: 502649418}
     - 6025d03626184f544890206a7a102da6: {fileID: 1373807429}
+    - abda27cb996d551479afb028eca6557a: {fileID: 1373807429}
     - dd5581dcb098038459027271261e9fd0: {fileID: 1485651280}
     - 9dd4621aced46aa4d97314bfb9471da1: {fileID: 0}
     - 4774536d372707847ad3bb9eb111d674: {fileID: 0}
@@ -2635,7 +2636,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &1373807430
 Animator:
   serializedVersion: 5
@@ -4727,7 +4728,7 @@ PrefabInstance:
       objectReference: {fileID: 1845675219}
     - target: {fileID: 3921311554826271815, guid: df64abfa53e9a034183fa5a15bb07086, type: 3}
       propertyPath: textScrollSpeed
-      value: 40
+      value: 34
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -23,7 +23,7 @@ public class TimeLineController : MonoBehaviour
         {
             //停止時の処理
             isPlay = true;
-            Debug.Log("ご対面完了");
+            Debug.Log("完了");
 
             //自gameobjectの非活性化
             gameObject.SetActive(false);
@@ -34,7 +34,7 @@ public class TimeLineController : MonoBehaviour
     private void OnDisable()
     {
         director.stopped -= OnPlayableDirectorStopped;
-        // gameObject.SetActive(false);
+        gameObject.SetActive(false);
 
     }
 
