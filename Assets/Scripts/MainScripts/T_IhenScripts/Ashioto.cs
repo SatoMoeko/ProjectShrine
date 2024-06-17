@@ -54,12 +54,12 @@ public class Ashioto : MonoBehaviour
         //相手のvelocity、xとzが-1~1を超えていたら移動しているとみなす
         if (checkMin < moveX & moveX < checkMax & checkMin < moveZ & moveZ < checkMax)
         {
-            // Debug.Log(targetIsMove + "止まってる判定");
+            Debug.Log(targetIsMove + "止まってる判定");
             targetIsMove = false;
         }
         else
         {
-            // Debug.Log(targetIsMove + "動いている判定");
+            Debug.Log(targetIsMove + "動いている判定");
             targetIsMove = true;
         }
     }
