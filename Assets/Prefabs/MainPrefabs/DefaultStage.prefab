@@ -1798,7 +1798,7 @@ GameObject:
   - component: {fileID: 2266981144616561789}
   m_Layer: 0
   m_Name: SushiGenerator
-  m_TagString: Untagged
+  m_TagString: DefaultStage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2039,6 +2039,10 @@ PrefabInstance:
     - target: {fileID: 6783780083631238861, guid: 1d967aa59877de848a88b0a31e1d5c64, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7213182211154223483, guid: 1d967aa59877de848a88b0a31e1d5c64, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17508811, g: 0.083764285, b: 0.08319887, a: 1}
+  m_IndirectSpecularColor: {r: 0.17508823, g: 0.08376233, b: 0.08320326, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -237,8 +237,9 @@ GameObject:
   - component: {fileID: 550460060}
   - component: {fileID: 550460059}
   - component: {fileID: 550460058}
-  - component: {fileID: 550460057}
   - component: {fileID: 550460056}
+  - component: {fileID: 550460065}
+  - component: {fileID: 550460066}
   m_Layer: 5
   m_Name: Config
   m_TagString: Untagged
@@ -277,21 +278,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &550460057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 550460054}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2e064ab784ec604688d08a030dcef36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DurationSeconds: 1.65
-  EaseType: 9
-  canvasGroup: {fileID: 0}
 --- !u!114 &550460058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -336,7 +322,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 925712417}
+      - m_Target: {fileID: 925712416}
         m_TargetAssemblyTypeName: TitleController, Assembly-CSharp
         m_MethodName: 
         m_Mode: 1
@@ -386,6 +372,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 550460054}
   m_CullTransparentMesh: 1
+--- !u!114 &550460065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550460054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 550460066}
+          m_TargetAssemblyTypeName: TitleDotween, Assembly-CSharp
+          m_MethodName: OnMouseOver
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 550460066}
+          m_TargetAssemblyTypeName: TitleDotween, Assembly-CSharp
+          m_MethodName: OnMouseExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &550460066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550460054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0619b6b80f7b35499ab28ff4f5c44f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DurationSeconds: 1
+  EaseType: 0
 --- !u!1 &557808874
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,6 +790,7 @@ GameObject:
   m_Component:
   - component: {fileID: 925712418}
   - component: {fileID: 925712417}
+  - component: {fileID: 925712420}
   m_Layer: 0
   m_Name: TitleController
   m_TagString: Untagged
@@ -779,6 +825,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!225 &925712420
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925712416}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &1222277506
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,9 +941,9 @@ GameObject:
   - component: {fileID: 1725955870}
   - component: {fileID: 1725955869}
   - component: {fileID: 1725955868}
-  - component: {fileID: 1725955871}
   - component: {fileID: 1725955872}
   - component: {fileID: 1725955873}
+  - component: {fileID: 1725955874}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -1006,21 +1064,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1725955866}
   m_CullTransparentMesh: 1
---- !u!114 &1725955871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1725955866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2e064ab784ec604688d08a030dcef36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DurationSeconds: 1.65
-  EaseType: 9
-  canvasGroup: {fileID: 0}
 --- !u!225 &1725955872
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1047,6 +1090,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DurationSeconds: 1
   EaseType: 0
+--- !u!114 &1725955874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725955866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1725955873}
+          m_TargetAssemblyTypeName: TitleDotween, Assembly-CSharp
+          m_MethodName: OnMouseOver
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1725955873}
+          m_TargetAssemblyTypeName: TitleDotween, Assembly-CSharp
+          m_MethodName: OnMouseExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1782682215
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,6 +1145,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1782682217}
   - component: {fileID: 1782682216}
+  - component: {fileID: 1782682219}
+  - component: {fileID: 1782682218}
   m_Layer: 0
   m_Name: BGM
   m_TagString: Untagged
@@ -1175,6 +1265,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1782682218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782682215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a20fffc8b55b2f64497dc6df5a48858e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1782682219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782682215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1746123ff5ac3f64993e5289fcc6b25e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BGMaudioSource: {fileID: 0}
+  SEaudioSource: {fileID: 0}
+  BGMs: []
+  SEs: []
+  Opened_Audio_Setting: 0
 --- !u!1 &1959690375
 GameObject:
   m_ObjectHideFlags: 0
@@ -1187,8 +1306,9 @@ GameObject:
   - component: {fileID: 1959690381}
   - component: {fileID: 1959690380}
   - component: {fileID: 1959690379}
-  - component: {fileID: 1959690378}
   - component: {fileID: 1959690377}
+  - component: {fileID: 1959690382}
+  - component: {fileID: 1959690383}
   m_Layer: 5
   m_Name: AchivementsButton
   m_TagString: Untagged
@@ -1227,21 +1347,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &1959690378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1959690375}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2e064ab784ec604688d08a030dcef36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DurationSeconds: 30
-  EaseType: 9
-  canvasGroup: {fileID: 0}
 --- !u!114 &1959690379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1336,6 +1441,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1959690375}
   m_CullTransparentMesh: 1
+--- !u!114 &1959690382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959690375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0619b6b80f7b35499ab28ff4f5c44f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DurationSeconds: 1
+  EaseType: 0
+--- !u!114 &1959690383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959690375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1959690382}
+          m_TargetAssemblyTypeName: TitleDotween, Assembly-CSharp
+          m_MethodName: OnMouseOver
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1959690382}
+          m_TargetAssemblyTypeName: TitleDotween, Assembly-CSharp
+          m_MethodName: OnMouseExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2046954683
 GameObject:
   m_ObjectHideFlags: 0
