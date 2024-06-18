@@ -2929,6 +2929,16 @@ MonoBehaviour:
   - {fileID: 8397022371453114954, guid: edc9fb1344ea7454db066d64bbbe78d3, type: 3}
   - {fileID: 8397022371453114954, guid: 5546d5dc60bd4f644bf457931774942c, type: 3}
   - {fileID: 8397022371453114954, guid: 8b621344fec540c469ea55473f1db935, type: 3}
+  - {fileID: 5360906566962909682, guid: f9e5b0069ff0de54aae0feff3c0a88c1, type: 3}
+  - {fileID: 3766633827228360037, guid: 6ef9409cb138b4844bb7f17f9cc17429, type: 3}
+  - {fileID: 5535866234892940430, guid: f06fec5b104d3134e937c1d0ea3d349a, type: 3}
+  - {fileID: 172028616333627461, guid: 50b2cab068f4c50438cb50de7384b388, type: 3}
+  - {fileID: 2566822008796086373, guid: 6f199c7b3a268f343b89bf4e792294c2, type: 3}
+  - {fileID: 1932736779463188346, guid: 46694a4d06e903f4e98b6abd791eabd0, type: 3}
+  - {fileID: 4410378021182592398, guid: 7c9f918d2eb40d34693c52637e7823bd, type: 3}
+  - {fileID: 698829238552981057, guid: c4b2cddafe66f4e4a8379c5fec3cbbef, type: 3}
+  - {fileID: 9210246550928012833, guid: 4e440e529f5497946b5ae22e1c0371b5, type: 3}
+  - {fileID: 5623099287002808964, guid: ffacc7b811745dc4b8eb252ef984b6db, type: 3}
   startChipIndex: 1
   preInstantiate: 1
   generatedStageList:
