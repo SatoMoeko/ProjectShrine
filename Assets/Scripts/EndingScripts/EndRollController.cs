@@ -148,9 +148,6 @@ public class EndRollController : MonoBehaviour
         }
     }
 
-    //UI座標⇔ワールド座標
-
-
     //初期位置設定
     void SetPosition()
     {
