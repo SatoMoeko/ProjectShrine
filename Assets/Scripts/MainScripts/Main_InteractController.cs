@@ -8,6 +8,7 @@ public class Main_InteractController : MonoBehaviour
     //UIをセット
     public GameObject look;
     public GameObject rulePaper;
+    AudioSource audioSource;
 
 
     //UIみえているか判定
@@ -17,7 +18,7 @@ public class Main_InteractController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -33,11 +34,16 @@ public class Main_InteractController : MonoBehaviour
 
         if (look.activeSelf && Input.GetKey(KeyCode.F))
         {
+            GetComponent<AudioSource>().Play();
             //UIをひらく
             if (getLook)
+            {
                 rulePaper.SetActive(true);//みえる処理
+            }
             else
+            {
                 rulePaper.SetActive(false);//かくす処理
+            }
         }
         getLook = !getLook;
     }
@@ -49,6 +55,7 @@ public class Main_InteractController : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
+        rulePaper.SetActive(false);
         look.SetActive(false);
     }
 }

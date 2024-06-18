@@ -7,6 +7,7 @@ public class SushiGenerator : MonoBehaviour
     bool isEnter = false;
     public GameObject sushi;
     public GameObject look;
+    AudioSource audioSource;
 
     void OnTriggerEnter(Collider other)
     {
@@ -27,7 +28,7 @@ public class SushiGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -36,6 +37,7 @@ public class SushiGenerator : MonoBehaviour
         if (isEnter && Input.GetKey(KeyCode.E))
         {
             sushi.SetActive(true);
+            GetComponent<AudioSource>().Play();
             look.SetActive(false);
         }
 
