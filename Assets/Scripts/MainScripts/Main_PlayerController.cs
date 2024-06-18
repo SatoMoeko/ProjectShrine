@@ -8,6 +8,7 @@ public class Main_PlayerController : MonoBehaviour
     Rigidbody rb;
     AudioSource audioSource;
 
+
     float HorizontalInput;
     float VerticalInput;
 
@@ -60,12 +61,7 @@ public class Main_PlayerController : MonoBehaviour
 
         ProcessInput();
         SpeedControl();
-
-        if (Input.GetKey(KeyCode.W))
-        {
-            audioSource.PlayOneShot(audioSource.clip);
-
-        }
+        AudioPlay();
 
     }
 
@@ -73,6 +69,23 @@ public class Main_PlayerController : MonoBehaviour
     {
         movePlayer();
     }
+
+    void AudioPlay()
+    {
+
+        if (Input.GetKeyDown("w") || Input.GetKeyDown("a") || Input.GetKeyDown("d"))
+        {
+            GetComponent<AudioSource>().Play();
+        }
+
+        if (Input.GetKeyUp("w") || Input.GetKeyUp("a") || Input.GetKeyUp("d"))
+        {
+            GetComponent<AudioSource>().Stop();
+        }
+    }
+
+
+
 
     void ProcessInput()
     {
