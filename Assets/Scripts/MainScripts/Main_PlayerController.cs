@@ -6,6 +6,7 @@ public class Main_PlayerController : MonoBehaviour
 {
     Vector3 moveDirection;
     Rigidbody rb;
+    AudioSource audioSource;
 
     float HorizontalInput;
     float VerticalInput;
@@ -40,6 +41,7 @@ public class Main_PlayerController : MonoBehaviour
         stageGenerator = GetComponent<StageGenerator>();
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+        audioSource = GetComponent<AudioSource>();
 
     }
 
@@ -59,7 +61,11 @@ public class Main_PlayerController : MonoBehaviour
         ProcessInput();
         SpeedControl();
 
+        if (Input.GetKey(KeyCode.W))
+        {
+            audioSource.PlayOneShot(audioSource.clip);
 
+        }
 
     }
 
@@ -81,7 +87,6 @@ public class Main_PlayerController : MonoBehaviour
         //向いている方向に進む
         moveDirection = orientation.forward * VerticalInput + orientation.right * HorizontalInput;
         rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
-        //GetComponent<AudioSource>().Play();
     }
 
 
