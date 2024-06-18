@@ -45,11 +45,11 @@ public class Ashioto : MonoBehaviour
     //歩いていたら足音を鳴らす ※音量を調節しているだけでずっと鳴ってる
     void SePlay()
     {
-        //歩いていればpitch=1にしてreturn
-        if (targetIsMove) { se.pitch = 1; return; }
+        //歩いていればvolume=1にしてreturn
+        if (targetIsMove) { se.volume = 1; return; }
 
-        //歩いていなければpitch=0で再生
-        se.pitch = 0.0f;
+        //歩いていなければvolumeで再生
+        se.volume = 0.0f;
         se.Play();
     }
 
