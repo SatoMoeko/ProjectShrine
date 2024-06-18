@@ -745,8 +745,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd24afb884c3f8a4cbdbe438aa90634e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensX: 200
-  sensY: 200
+  sensX: 100
+  sensY: 100
   orientation: {fileID: 902607214}
   CamHolder: {fileID: 100404310}
 --- !u!114 &585433762
@@ -1742,9 +1742,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1641554036}
   - {fileID: 902607214}
   - {fileID: 984381316}
+  - {fileID: 1641554036}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1415690743
@@ -1809,7 +1809,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
