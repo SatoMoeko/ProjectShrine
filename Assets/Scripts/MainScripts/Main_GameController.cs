@@ -31,7 +31,8 @@ public class Main_GameController : MonoBehaviour
 
     void TurnToEnd()
     {
-        SceneManager.LoadScene("Ending-T");
+        Initiate.Fade("Ending-T", Color.black, 1.0f);
+        //SceneManager.LoadScene("Ending-T");
     }
 
 
