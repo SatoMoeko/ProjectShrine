@@ -46,6 +46,8 @@ public class EndingSceneController : MonoBehaviour
 
     public GameObject ihen;
 
+    public GameObject player;
+
     private void Awake()
     {
         // //コンポーネント取得
@@ -139,8 +141,8 @@ public class EndingSceneController : MonoBehaviour
     IEnumerator E_LookBackCoroutine()
     {
         //背後を左回りで振り返る
-        //タイムラインを8秒の部分から再生
-        endingDirector.time = 8;
+        //タイムラインを17秒の部分から再生
+        endingDirector.time = 17;
         endingDirector.Resume();
 
         //タイムラインの再生が終わったら

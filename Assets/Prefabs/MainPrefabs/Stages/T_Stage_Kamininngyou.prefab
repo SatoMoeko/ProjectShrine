@@ -247,7 +247,7 @@ MonoBehaviour:
   - {fileID: 2048630485363058575}
   - {fileID: 7003591016790184934}
   - {fileID: 8502546424276928101}
-  countdown: 30
+  countdown: 50
   kaminingyouUI: {fileID: 2947313340676658514}
   kami_count: {fileID: 7266163150547689391}
   timetext: {fileID: 1172072597803850766}
