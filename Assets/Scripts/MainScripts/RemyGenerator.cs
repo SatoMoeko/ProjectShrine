@@ -6,6 +6,7 @@ public class RemyGenerator : MonoBehaviour
 {
     bool isEnter = false;
     public GameObject remy;
+    public Main_GameController gameController;
 
     void OnTriggerEnter(Collider other)
     {
@@ -32,6 +33,9 @@ public class RemyGenerator : MonoBehaviour
         if (isEnter)
         {
             remy.SetActive(true);
+
+
         }
+
     }
 }

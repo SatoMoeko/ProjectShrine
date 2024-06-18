@@ -80,9 +80,9 @@ public class EndRollController : MonoBehaviour
         music.Play();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        //スペースキー
+        //スペースキー押すとスキップしてタイトルへ
         if (Input.GetKeyDown(KeyCode.Space))
         {
             endRollMsgCoroutine = StartCoroutine(GoToStartScene());
@@ -147,9 +147,6 @@ public class EndRollController : MonoBehaviour
                 endRoll.transform.position.y + textScrollSpeed * Time.deltaTime);
         }
     }
-
-    //UI座標⇔ワールド座標
-
 
     //初期位置設定
     void SetPosition()

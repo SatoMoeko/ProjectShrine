@@ -92,7 +92,7 @@ public class EndingSceneController : MonoBehaviour
         //マウスポインタ不可視化
         Cursor.visible = false;
 
-        Debug.Log("振り返る");
+        // Debug.Log("振り返る");
 
         //選択肢パネル非表示
         Panel_NotActive();
@@ -109,7 +109,7 @@ public class EndingSceneController : MonoBehaviour
     {
         //マウスポインタ不可視化
         Cursor.visible = false;
-        Debug.Log("振り返らない");
+        // Debug.Log("振り返らない");
 
         //選択肢パネル非表示
         Panel_NotActive();
