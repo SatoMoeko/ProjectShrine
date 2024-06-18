@@ -6,6 +6,7 @@ public class Main_PlayerController : MonoBehaviour
 {
     Vector3 moveDirection;
     Rigidbody rb;
+    AudioSource audioSource;
 
     float HorizontalInput;
     float VerticalInput;
@@ -13,7 +14,6 @@ public class Main_PlayerController : MonoBehaviour
     public Transform orientation;
 
     public StageGenerator stageGenerator;
-
     public Main_GameController gameController;
 
     public float moveSpeed;
@@ -23,6 +23,16 @@ public class Main_PlayerController : MonoBehaviour
     public LayerMask Ground;
     bool grounded;
 
+    int point;
+
+
+
+    public int Point()
+    {
+        return point;
+    }
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +41,7 @@ public class Main_PlayerController : MonoBehaviour
         stageGenerator = GetComponent<StageGenerator>();
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+        audioSource = GetComponent<AudioSource>();
 
     }
 
@@ -49,6 +60,12 @@ public class Main_PlayerController : MonoBehaviour
 
         ProcessInput();
         SpeedControl();
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            audioSource.PlayOneShot(audioSource.clip);
+
+        }
 
     }
 
@@ -88,14 +105,68 @@ public class Main_PlayerController : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("DefaultStage"))
+        if (other.CompareTag("DefaultSushi"))
         {
-            gameController.DefaultStagePoint();
+            GameObject stage = other.gameObject.transform.parent.gameObject;
+            GameObject sushi = stage.transform.Find("Inari").gameObject;
+            Debug.Log(sushi.activeSelf);
+
+            if (sushi.activeSelf == true)
+            {
+                point = 0;
+            }
+            if (sushi.activeSelf == false)
+            {
+                point += 1;
+            }
         }
-        if (other.CompareTag("OtherStage"))
+        if (other.CompareTag("OtherSushi"))
         {
-            gameController.OtherStagePoint();
+            GameObject stage = other.gameObject.transform.parent.gameObject;
+            GameObject sushi = stage.transform.Find("Inari").gameObject;
+
+            if (sushi.activeSelf == true)
+            {
+                point += 1;
+            }
+            if (sushi.activeSelf == false)
+            {
+                point = 0;
+            }
         }
+        //道案内看板文字表示変更
+        if (other.CompareTag("Paper"))
+        {
+            GameObject stage = other.gameObject.transform.parent.gameObject;
+            GameObject papers = stage.transform.Find("TurnPapers").gameObject;
+
+            if (point == 0)
+            {
+                GameObject paper = papers.transform.Find("5nomine").gameObject;
+                paper.SetActive(true);
+            }
+            if (point == 1)
+            {
+                GameObject paper = papers.transform.Find("4nomine").gameObject;
+                paper.SetActive(true);
+            }
+            if (point == 2)
+            {
+                GameObject paper = papers.transform.Find("3nomine").gameObject;
+                paper.SetActive(true);
+            }
+            if (point == 3)
+            {
+                GameObject paper = papers.transform.Find("2nomine").gameObject;
+                paper.SetActive(true);
+            }
+            if (point == 4)
+            {
+                GameObject paper = papers.transform.Find("1nomine").gameObject;
+                paper.SetActive(true);
+            }
+        }
+
     }
 
 }

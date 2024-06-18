@@ -829,6 +829,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1108115108}
+    - target: {fileID: 2349733741375366762, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2760278119573719572, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -837,6 +841,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2029697922}
+    - target: {fileID: 5787310002681627850, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6159345986809061093, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -885,6 +893,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2079693320}
+    - target: {fileID: 8239125971467689563, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8397022371453114954, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
       propertyPath: m_Name
       value: DefaultStage1
@@ -999,6 +1011,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1849413159}
+    - target: {fileID: 2349733741375366762, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2760278119573719572, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -1007,6 +1023,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1727035791}
+    - target: {fileID: 5787310002681627850, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6159345986809061093, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -1055,6 +1075,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1976065205}
+    - target: {fileID: 8239125971467689563, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8245251027397539014, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1225,7 +1249,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 902607214}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Orientation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1256,7 +1280,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 984381316}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CameraPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1472,7 +1496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad32da580b620424cb029aa2857c3ff5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sushi: {fileID: 532818448563601105, guid: 5c0437a3ee98bbc4091ce47587e1bc3d, type: 3}
+  playerController: {fileID: 1415690745}
 --- !u!4 &1055887654
 Transform:
   m_ObjectHideFlags: 0
@@ -1697,7 +1721,8 @@ GameObject:
   - component: {fileID: 1415690742}
   - component: {fileID: 1415690743}
   - component: {fileID: 1415690745}
-  m_Layer: 0
+  - component: {fileID: 1415690746}
+  m_Layer: 8
   m_Name: MainPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1764,12 +1789,108 @@ MonoBehaviour:
   orientation: {fileID: 902607214}
   stageGenerator: {fileID: 2117642243}
   gameController: {fileID: 1055887653}
-  moveSpeed: 5
-  groundDrag: 3
+  moveSpeed: 1
+  groundDrag: 7
   playerheight: 1.6
   Ground:
     serializedVersion: 2
     m_Bits: 8
+--- !u!82 &1415690746
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1415690741}
+  m_Enabled: 0
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 087ccc7ce9ba9354b8b6b52435f45893, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1641554031
 GameObject:
   m_ObjectHideFlags: 0
@@ -1783,7 +1904,7 @@ GameObject:
   - component: {fileID: 1641554034}
   - component: {fileID: 1641554033}
   - component: {fileID: 1641554037}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2939,6 +3060,7 @@ MonoBehaviour:
   - {fileID: 698829238552981057, guid: c4b2cddafe66f4e4a8379c5fec3cbbef, type: 3}
   - {fileID: 9210246550928012833, guid: 4e440e529f5497946b5ae22e1c0371b5, type: 3}
   - {fileID: 5623099287002808964, guid: ffacc7b811745dc4b8eb252ef984b6db, type: 3}
+  - {fileID: 8397022371453114954, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
   startChipIndex: 1
   preInstantiate: 1
   generatedStageList:

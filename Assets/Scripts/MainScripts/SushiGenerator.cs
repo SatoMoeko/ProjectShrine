@@ -6,18 +6,22 @@ public class SushiGenerator : MonoBehaviour
 {
     bool isEnter = false;
     public GameObject sushi;
+    public GameObject look;
 
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             isEnter = true;
+            look.SetActive(true);
         }
     }
 
     void OnTriggerExit(Collider other)
     {
         isEnter = false;
+
+
     }
 
     // Start is called before the first frame update
@@ -32,7 +36,10 @@ public class SushiGenerator : MonoBehaviour
         if (isEnter && Input.GetKey(KeyCode.E))
         {
             sushi.SetActive(true);
+            look.SetActive(false);
         }
+
+
     }
 
 }
