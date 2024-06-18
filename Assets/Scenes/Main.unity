@@ -1789,7 +1789,7 @@ MonoBehaviour:
   orientation: {fileID: 902607214}
   stageGenerator: {fileID: 2117642243}
   gameController: {fileID: 1055887653}
-  moveSpeed: 1
+  moveSpeed: 1.1
   groundDrag: 7
   playerheight: 1.6
   Ground:
