@@ -3189,6 +3189,8 @@ MonoBehaviour:
   - {fileID: 9210246550928012833, guid: 4e440e529f5497946b5ae22e1c0371b5, type: 3}
   - {fileID: 5623099287002808964, guid: ffacc7b811745dc4b8eb252ef984b6db, type: 3}
   - {fileID: 8397022371453114954, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
+  - {fileID: 3971236437681253235, guid: 0700621a215c0b942a3e34e62ad0c500, type: 3}
+  - {fileID: 2178077391606854575, guid: e05b027ce01ad4c498ddb3852268ef4b, type: 3}
   startChipIndex: 1
   preInstantiate: 1
   generatedStageList:
