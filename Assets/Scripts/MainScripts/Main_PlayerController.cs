@@ -81,6 +81,7 @@ public class Main_PlayerController : MonoBehaviour
         //向いている方向に進む
         moveDirection = orientation.forward * VerticalInput + orientation.right * HorizontalInput;
         rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+        //GetComponent<AudioSource>().Play();
     }
 
 
@@ -126,6 +127,38 @@ public class Main_PlayerController : MonoBehaviour
             if (sushi.activeSelf == false)
             {
                 point = 0;
+            }
+        }
+        //道案内看板文字表示変更
+        if (other.CompareTag("Paper"))
+        {
+            GameObject stage = other.gameObject.transform.parent.gameObject;
+            GameObject papers = stage.transform.Find("TurnPapers").gameObject;
+
+            if (point == 0)
+            {
+                GameObject paper = papers.transform.Find("5nomine").gameObject;
+                paper.SetActive(true);
+            }
+            if (point == 1)
+            {
+                GameObject paper = papers.transform.Find("4nomine").gameObject;
+                paper.SetActive(true);
+            }
+            if (point == 2)
+            {
+                GameObject paper = papers.transform.Find("3nomine").gameObject;
+                paper.SetActive(true);
+            }
+            if (point == 3)
+            {
+                GameObject paper = papers.transform.Find("2nomine").gameObject;
+                paper.SetActive(true);
+            }
+            if (point == 4)
+            {
+                GameObject paper = papers.transform.Find("1nomine").gameObject;
+                paper.SetActive(true);
             }
         }
 

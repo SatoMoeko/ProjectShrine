@@ -10,6 +10,7 @@ TagManager:
   - Ghost
   - DefaultSushi
   - OtherSushi
+  - Paper
   layers:
   - Default
   - TransparentFX

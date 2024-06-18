@@ -8,11 +8,9 @@ public class Main_InteractController : MonoBehaviour
     //UIをセット
     public GameObject look;
     public GameObject rulePaper;
-    //カメラをセット
-    public GameObject camera;
 
 
-    //タンスが開いているか判定
+    //UIみえているか判定
 
     bool getLook = false;
 
@@ -37,9 +35,9 @@ public class Main_InteractController : MonoBehaviour
         {
             //UIをひらく
             if (getLook)
-                rulePaper.SetActive(true);//あける処理
+                rulePaper.SetActive(true);//みえる処理
             else
-                rulePaper.SetActive(false);//しめる処理
+                rulePaper.SetActive(false);//かくす処理
         }
         getLook = !getLook;
     }
@@ -54,4 +52,3 @@ public class Main_InteractController : MonoBehaviour
         look.SetActive(false);
     }
 }
-
