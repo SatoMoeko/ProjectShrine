@@ -35,6 +35,7 @@ public class Ending_PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         MovePlayer();
+        LineOfSight();
     }
 
     void MovePlayer()
