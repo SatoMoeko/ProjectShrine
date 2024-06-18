@@ -246,7 +246,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &550460055
 RectTransform:
   m_ObjectHideFlags: 0
@@ -635,7 +635,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -170}
-  m_SizeDelta: {x: 800, y: 400}
+  m_SizeDelta: {x: 850, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &608263199
 MonoBehaviour:
@@ -657,7 +657,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4df96b97de374e445a773fc06568cef2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f4c1e657458e6b24dae2a7694efb13f7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -687,6 +687,7 @@ GameObject:
   - component: {fileID: 628002309}
   - component: {fileID: 628002308}
   - component: {fileID: 628002307}
+  - component: {fileID: 628002311}
   m_Layer: 5
   m_Name: TiltleCanvas
   m_TagString: Untagged
@@ -780,6 +781,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &628002311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628002306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 331a7fd7b9a929f42992cb02fec15681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Panelfade: {fileID: 0}
+  fadealpha: {fileID: 0}
+  alpha: 0
+  fadeout: 0
+  SceneNo: 1
 --- !u!1 &925712416
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,8 +940,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1222277506}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.03751586, y: 0, z: 0, w: 0.9992961}
-  m_LocalPosition: {x: 0, y: -59.2, z: 223.64}
+  m_LocalRotation: {x: -0.055780027, y: 0.0005963178, z: -0.000031487674, w: -0.99844295}
+  m_LocalPosition: {x: 276.54666, y: 73.7487, z: -294.26047}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1145,8 +1163,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1782682217}
   - component: {fileID: 1782682216}
-  - component: {fileID: 1782682219}
-  - component: {fileID: 1782682218}
   m_Layer: 0
   m_Name: BGM
   m_TagString: Untagged
@@ -1259,41 +1275,12 @@ Transform:
   m_GameObject: {fileID: 1782682215}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 222, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1782682218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1782682215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a20fffc8b55b2f64497dc6df5a48858e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1782682219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1782682215}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1746123ff5ac3f64993e5289fcc6b25e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BGMaudioSource: {fileID: 0}
-  SEaudioSource: {fileID: 0}
-  BGMs: []
-  SEs: []
-  Opened_Audio_Setting: 0
 --- !u!1 &1959690375
 GameObject:
   m_ObjectHideFlags: 0
@@ -1315,7 +1302,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1959690376
 RectTransform:
   m_ObjectHideFlags: 0
