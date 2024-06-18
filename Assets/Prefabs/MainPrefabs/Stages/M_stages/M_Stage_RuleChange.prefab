@@ -2957,6 +2957,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6078373835610452462}
     m_Modifications:
+    - target: {fileID: 647397750232933242, guid: 1d967aa59877de848a88b0a31e1d5c64, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9999074
+      objectReference: {fileID: 0}
+    - target: {fileID: 647397750232933242, guid: 1d967aa59877de848a88b0a31e1d5c64, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 647397750232933242, guid: 1d967aa59877de848a88b0a31e1d5c64, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 647397750232933242, guid: 1d967aa59877de848a88b0a31e1d5c64, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.013613097
+      objectReference: {fileID: 0}
+    - target: {fileID: 647397750232933242, guid: 1d967aa59877de848a88b0a31e1d5c64, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -1.56
+      objectReference: {fileID: 0}
     - target: {fileID: 1773217046998312445, guid: 1d967aa59877de848a88b0a31e1d5c64, type: 3}
       propertyPath: m_Name
       value: ToriiRoad2
