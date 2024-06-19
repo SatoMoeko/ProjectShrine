@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+
 
 public class Main_PlayerController : MonoBehaviour
 {
@@ -25,7 +27,7 @@ public class Main_PlayerController : MonoBehaviour
     bool grounded;
 
     int point;
-
+    HashSet<GameObject> achieveList = new HashSet<GameObject>();
 
 
     public int Point()
@@ -141,11 +143,19 @@ public class Main_PlayerController : MonoBehaviour
             if (sushi.activeSelf == true)
             {
                 point += 1;
+
             }
             if (sushi.activeSelf == false)
             {
                 point = 0;
             }
+
+            //異変は全部で18
+            achieveList.Add(stage);
+            int getAchieve = achieveList.Count();
+            PlayerPrefs.SetInt("SCORE", getAchieve);
+            PlayerPrefs.Save();
+
         }
         //道案内看板文字表示変更
         if (other.CompareTag("Paper"))

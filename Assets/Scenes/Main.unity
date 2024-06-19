@@ -873,8 +873,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd24afb884c3f8a4cbdbe438aa90634e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensX: 100
-  sensY: 100
+  sensX: 50
+  sensY: 50
   orientation: {fileID: 902607214}
   CamHolder: {fileID: 100404310}
 --- !u!114 &585433762
@@ -3191,6 +3191,9 @@ MonoBehaviour:
   - {fileID: 8397022371453114954, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
   - {fileID: 3971236437681253235, guid: 0700621a215c0b942a3e34e62ad0c500, type: 3}
   - {fileID: 2178077391606854575, guid: e05b027ce01ad4c498ddb3852268ef4b, type: 3}
+  - {fileID: 8397022371453114954, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
+  - {fileID: 8397022371453114954, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
+  - {fileID: 8397022371453114954, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
   startChipIndex: 1
   preInstantiate: 1
   generatedStageList:

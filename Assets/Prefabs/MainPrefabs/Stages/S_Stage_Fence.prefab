@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2641723423981612644}
   m_Layer: 0
   m_Name: S_Stage_Fence
-  m_TagString: Untagged
+  m_TagString: OtherStage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

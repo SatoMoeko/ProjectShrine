@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9125905398527226925}
   m_Layer: 0
   m_Name: S_stage_Stone
-  m_TagString: Untagged
+  m_TagString: OtherStage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
