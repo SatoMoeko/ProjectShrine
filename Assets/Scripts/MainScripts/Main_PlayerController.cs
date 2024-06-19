@@ -30,6 +30,7 @@ public class Main_PlayerController : MonoBehaviour
     HashSet<GameObject> achieveList = new HashSet<GameObject>();
 
 
+
     public int Point()
     {
         return point;
