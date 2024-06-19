@@ -1,49 +1,81 @@
-<size=70><color=red>Team-B</color></size>
-sato
-tsuru
-mita
+<size=60><color=red>Team-B</color></size>
+
+佐藤　鶴崎　三田
 
 
-<size=70><color=red>Scene</color></size>
 
-<size=50>-Title-</size>
-mita
+<size=60><color=red>構成</color></size>
 
-<size=50>-Game-</size>
-sato
+<size=50>-タイトル-</size>
 
-<size=50>-Ending-</size>
-tsuru
+三田
 
 
-<size=70><color=red>Design</color></size>
+<size=50>-ゲームシーン-</size>
 
-<size=50>-Title-</size>
-mita
+佐藤
+
+
+<size=50>-エンディング-</size>
+
+鶴崎
+
+
+
+<size=60><color=red>デザイン</color></size>
+
+<size=50>-タイトル-</size>
+
+三田
+
 
 <size=50>-UI-</size>
-mita
 
-<size=50>-main field-</size>
-sato
-
-<size=50>-ending field-</size>
-tsuru
-
-<size=50>-ihen-</size>
-sato
-tsuru
-mita
+三田
 
 
-<size=70><color=red>materials</color></size>
+<size=50>-ゲームステージ-</size>
+
+佐藤
+
+
+<size=50>-エンディング-</size>
+
+鶴崎
+
+
+<size=50>-異変-</size>
+
+佐藤　鶴崎　三田
+
+
+
+<size=70><color=red>使用素材</color></size>
 
 <size=50>-3DCG-</size>
-hoge
-hoge
-hoge
+
+さびねずみ
+3DCG素材屋
+Kobashop
+鏑屋のお面屋
+eto-materials
+オノップ
+mixamo
+RX Factory
+
 
 <size=50>-SE/BGM-</size>
-hoge
-hoge
-hoge
+
+効果音ラボ
+Causality Sound
+稿屋 隆
+
+
+<size=50>タイトル曲</size>
+
+MOMIZizm/もみじば『妖しの神社』
+
+
+<size=50>エンディング曲</size>
+
+マニーラ『鳥居の前にて』

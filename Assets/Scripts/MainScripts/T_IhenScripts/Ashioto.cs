@@ -42,14 +42,14 @@ public class Ashioto : MonoBehaviour
 
     }
 
-    //歩いていたら足音を鳴らす ※音量を調節しているだけでずっと鳴ってる
+    //歩いていたら足音を鳴らす ※pitch調節しているだけ
     void SePlay()
     {
-        //歩いていればvolume=1にしてreturn
-        if (targetIsMove) { se.volume = 1; return; }
+        //歩いていればpitch=1にしてreturn
+        if (targetIsMove) { se.pitch = 1; return; }
 
-        //歩いていなければvolumeで再生
-        se.volume = 0.0f;
+        //歩いていなければpitch=0
+        se.pitch = 0.0f;
         se.Play();
     }
 
@@ -62,12 +62,12 @@ public class Ashioto : MonoBehaviour
         //相手のvelocity、xとzが-1~1を超えていたら移動しているとみなす
         if (checkMin < moveX & moveX < checkMax & checkMin < moveZ & moveZ < checkMax)
         {
-            Debug.Log(move + "止まってる判定");
+            // Debug.Log(move + "止まってる判定");
             targetIsMove = false;
         }
         else
         {
-            Debug.Log(move + "動いている判定");
+            // Debug.Log(move + "動いている判定");
             targetIsMove = true;
         }
     }

@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 
 
 //エンドロールのコントロール
-//ほぼ完成
 
 public class EndRollController : MonoBehaviour
 {
@@ -202,6 +201,9 @@ public class EndRollController : MonoBehaviour
     {
         //3秒停止
         yield return new WaitForSeconds(3f);
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
 
         //コルーチン停止とタイトル遷移
         StopCoroutine(endRollMsgCoroutine);
