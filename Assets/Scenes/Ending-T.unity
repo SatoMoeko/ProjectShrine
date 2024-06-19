@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17508811, g: 0.083764285, b: 0.08319887, a: 1}
+  m_IndirectSpecularColor: {r: 0.1750881, g: 0.083764285, b: 0.08319887, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -312,7 +312,7 @@ Transform:
   m_GameObject: {fileID: 142804568}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.09, y: -1.7099999, z: -6.28}
+  m_LocalPosition: {x: -0.088460974, y: -1.5046307, z: -5.9051833}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1337,7 +1337,7 @@ Transform:
   m_GameObject: {fileID: 502649417}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.09, y: -1.7099999, z: -6.28}
+  m_LocalPosition: {x: -0.088460974, y: -1.5046307, z: -5.9051833}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1476,7 +1476,7 @@ Transform:
   m_GameObject: {fileID: 587278672}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: -0.09, y: -1.7099999, z: -6.28}
+  m_LocalPosition: {x: -0.00007317588, y: 1.6000068, z: 20.958921}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1502,7 +1502,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 1076134599}
+  m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60.000004
     OrthographicSize: 5
@@ -3260,6 +3260,7 @@ PlayableDirector:
     - 1a657940648b3c44caede2734334564e: {fileID: 2022170581}
     - ba6c62d5a81bd7343bfcada3a2e5dbc7: {fileID: 1052028440}
     - c7a82026fd5241247a9e3b318f13b34f: {fileID: 2022170581}
+    - 1591b308b8bbe0a45b77681fe29b497a: {fileID: 1546890814}
     - 88d4d7286a8cd3443a1f41ab6f7c8eb8: {fileID: 1101620126}
     - 699509c298a315e4980841cbc7915894: {fileID: 142804569}
     - 97c11d502f356f742a36d3c11bd5f0c9: {fileID: 587278674}
@@ -6423,11 +6424,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 534529046858872692, guid: 29a9bb7c4b2d851439fee793354bf71f, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 196.28
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 534529046858872692, guid: 29a9bb7c4b2d851439fee793354bf71f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 44.69
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 534529046858872692, guid: 29a9bb7c4b2d851439fee793354bf71f, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -6447,11 +6448,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1686539582202955614, guid: 29a9bb7c4b2d851439fee793354bf71f, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 665.12
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1686539582202955614, guid: 29a9bb7c4b2d851439fee793354bf71f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 61.45
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2010665674929365569, guid: 29a9bb7c4b2d851439fee793354bf71f, type: 3}
       propertyPath: m_text
@@ -6561,11 +6562,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5649900167955283239, guid: 29a9bb7c4b2d851439fee793354bf71f, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 600.01
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5649900167955283239, guid: 29a9bb7c4b2d851439fee793354bf71f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 217.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7104272903699908140, guid: 29a9bb7c4b2d851439fee793354bf71f, type: 3}
       propertyPath: m_Name
@@ -6666,7 +6667,7 @@ PrefabInstance:
       objectReference: {fileID: 1845675219}
     - target: {fileID: 3921311554826271815, guid: df64abfa53e9a034183fa5a15bb07086, type: 3}
       propertyPath: textScrollSpeed
-      value: 23
+      value: 34
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6734,11 +6735,11 @@ PrefabInstance:
       objectReference: {fileID: 1172461844}
     - target: {fileID: 2183239090355980903, guid: 6e6e4041e520561418df68049a2b9063, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 14.01001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2183239090355980903, guid: 6e6e4041e520561418df68049a2b9063, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 20.010002
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2319245804078678741, guid: 6e6e4041e520561418df68049a2b9063, type: 3}
       propertyPath: m_text
@@ -6918,11 +6919,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6354145260421446397, guid: 6e6e4041e520561418df68049a2b9063, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -92.22
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6354145260421446397, guid: 6e6e4041e520561418df68049a2b9063, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 20.010002
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6950496628729731070, guid: 6e6e4041e520561418df68049a2b9063, type: 3}
       propertyPath: m_Name
