@@ -38,15 +38,10 @@ public class EndingSceneController : MonoBehaviour
     //エンドロールUI
     public GameObject endRollPanel;
 
-    //イベントムービー
-    public GameObject endingMovie;
-
     //BGM
     public AudioSource BGM;
 
     public GameObject ihen;
-
-    public GameObject player;
 
     private void Awake()
     {
@@ -68,9 +63,6 @@ public class EndingSceneController : MonoBehaviour
         //UI非表示
         Panel_NotActive();
         endRollPanel.SetActive(false);
-
-        //ムービー非表示
-        endingMovie.SetActive(false);
 
         //異変非表示
         ihen.SetActive(false);
@@ -122,9 +114,6 @@ public class EndingSceneController : MonoBehaviour
         //BGM停止
         BGM.Stop();
 
-        //ムービー再生
-        // endingMovie.SetActive(true);
-
         //エンディング２タイムライン活性
         ending2TimeLine.SetActive(true);
 
@@ -164,8 +153,7 @@ public class EndingSceneController : MonoBehaviour
     //振り返らない
     IEnumerator E_NotLookBackCoroutine()
     {
-        //videoControllerのisPlayがtrueになるまで待機
-        // yield return new WaitUntil(() => VideoController.isPlay == true);
+        //タイムライン再生が終わったら
         yield return new WaitUntil(() => !ending2TimeLine.activeInHierarchy == true);
 
         //ムービー後、エンドロールへ

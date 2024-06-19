@@ -80,7 +80,7 @@ public class EndRollController : MonoBehaviour
         music.Play();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         //スペースキー押すとスキップしてタイトルへ
         if (Input.GetKeyDown(KeyCode.Space))
