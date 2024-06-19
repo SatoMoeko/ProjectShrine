@@ -28,7 +28,7 @@ public class Main_PlayerController : MonoBehaviour
 
     int point;
     HashSet<GameObject> achieveList = new HashSet<GameObject>();
-
+    public int getAchieve; // スコア変数
 
 
     public int Point()
@@ -46,6 +46,8 @@ public class Main_PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
         audioSource = GetComponent<AudioSource>();
+        PlayerPrefs.SetInt("SCORE", getAchieve);
+        PlayerPrefs.Save();
 
     }
 
@@ -154,8 +156,6 @@ public class Main_PlayerController : MonoBehaviour
             //異変は全部で18
             achieveList.Add(stage);
             int getAchieve = achieveList.Count();
-            PlayerPrefs.SetInt("SCORE", getAchieve);
-            PlayerPrefs.Save();
 
         }
         //道案内看板文字表示変更

@@ -953,10 +953,18 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 351116201}
+    - target: {fileID: 1657986154081863173, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1884433415769835686, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1108115108}
+    - target: {fileID: 2233639921859648872, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 35b7224fd675f4c47bcddb0814d5f106, type: 2}
     - target: {fileID: 2349733741375366762, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -1042,7 +1050,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1108115108}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8723387091276245602, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
@@ -1923,6 +1932,7 @@ MonoBehaviour:
   Ground:
     serializedVersion: 2
     m_Bits: 8
+  getAchieve: 0
 --- !u!82 &1415690746
 AudioSource:
   m_ObjectHideFlags: 0
