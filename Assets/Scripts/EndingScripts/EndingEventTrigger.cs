@@ -17,6 +17,14 @@ public class EndingEventTrigger : MonoBehaviour
     //タイムライン
     public PlayableDirector endingTimeline;
 
+    //狐面
+    public GameObject kitsune;
+
+    private void Start()
+    {
+        kitsune.SetActive(false);
+    }
+
     void OnTriggerEnter(Collider other)
     {
         // Cursor.lockState = CursorLockMode.None;
@@ -38,5 +46,12 @@ public class EndingEventTrigger : MonoBehaviour
 
         selectEndingCanvas.SetActive(true);
         // Debug.Log("player接触");
+    }
+
+    //シグナルで呼び出す
+    //狐のお面を出現させる
+    public void ShowKitsune()
+    {
+        kitsune.SetActive(true);
     }
 }

@@ -38,7 +38,7 @@ public class KomachiController : MonoBehaviour
         {
             //orientation：視線の方向にrayを飛ばす
             Ray ray = new Ray(orientation.transform.position, orientation.transform.forward);
-            if (Physics.Raycast(ray, out RaycastHit hit, 3f, komachi))
+            if (Physics.Raycast(ray, out RaycastHit hit, 1f, komachi))
             {
                 //komachiレイヤーのコライダーにレイがぶつかったら一度だけ小町の仮面が出現する
                 if (!showOmen)

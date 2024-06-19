@@ -12,6 +12,6 @@ public class KokeshiController : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         // Debug.Log("入った");
-        kokeshi.transform.DOLocalRotate(new Vector3(0, 0, -25), 1f).SetEase(Ease.OutBounce).SetDelay(3f);
+        kokeshi.transform.DOLocalRotate(new Vector3(0, 0, -50), 1f).SetEase(Ease.OutBounce).SetDelay(2f);
     }
 }
