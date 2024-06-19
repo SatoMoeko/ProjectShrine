@@ -41,6 +41,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2641723423981612644}
     m_Modifications:
+    - target: {fileID: 6469289726977545854, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
+      propertyPath: m_TagString
+      value: OtherSushi
+      objectReference: {fileID: 0}
     - target: {fileID: 6547521750766764129, guid: a657ff39f4bd8ff459e884bb85c84cc0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
